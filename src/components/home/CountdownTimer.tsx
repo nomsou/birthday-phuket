@@ -1,45 +1,40 @@
 "use client";
-
 import { useState, useEffect } from "react";
 
 const TARGET_DATE = new Date("2026-12-14T00:00:00+07:00").getTime(); // Phuket time (UTC+7)
 
+function calculateTimeLeft() {
+  const now = Date.now();
+  const distance = TARGET_DATE - now;
+
+  if (distance < 0) {
+    return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  }
+
+  return {
+    days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+    seconds: Math.floor((distance % (1000 * 60)) / 1000),
+  };
+}
+
 export function CountdownTimer() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+  // Initialize with actual calculation instead of zeros
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const now = Date.now();
-      const distance = TARGET_DATE - now;
-
-      if (distance < 0) {
-        clearInterval(interval);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
-
-      setTimeLeft({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-        ),
-        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((distance % (1000 * 60)) / 1000),
-      });
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
-
     return () => clearInterval(interval);
   }, []);
 
   const pad = (n: number) => n.toString().padStart(2, "0");
 
   return (
-    <div className="flex items-center gap-3 md:gap-5">
+    // suppressHydrationWarning prevents console errors for minor ms differences
+    <div className="flex items-center gap-3 md:gap-5" suppressHydrationWarning>
       {[
         { value: timeLeft.days, label: "Days" },
         { value: timeLeft.hours, label: "Hours" },
