@@ -1,7 +1,5 @@
 "use client";
-
-import { generateICS } from "@/lib/calendar";
-import { Download } from "lucide-react";
+import { Calendar } from "lucide-react";
 
 type ItineraryEvent = {
   date: string;
@@ -13,47 +11,63 @@ type ItineraryEvent = {
 };
 
 export function AddToCalendarButton({ event }: { event: ItineraryEvent }) {
-  const handleDownload = () => {
+  const handleAdd = () => {
     const year = 2026;
-    const [dayStr] = event.date.split(" ");
+    const [monthStr, dayStr] = event.date.split(" ");
+    const monthMap: Record<string, number> = {
+      Jan: 1,
+      Feb: 2,
+      Mar: 3,
+      Apr: 4,
+      May: 5,
+      Jun: 6,
+      Jul: 7,
+      Aug: 8,
+      Sep: 9,
+      Oct: 10,
+      Nov: 11,
+      Dec: 12,
+    };
+    const month = monthMap[monthStr];
     const day = parseInt(dayStr);
 
-    // Parse time for start/end
-    const times = event.time.split("/").map((t) => t.trim());
-    const startTime =
-      times[0].includes("AM") || times[0].includes("PM")
-        ? new Date(`${year}-12-${day}T${times[0].replace(" ", "")}:00+07:00`)
-        : new Date(`${year}-12-${day}T00:00:00+07:00`);
+    let startHour = 12;
+    let startMinute = 0;
+    const timeMatch = event.time.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
 
-    const endTime =
-      times.length > 1 && (times[1].includes("AM") || times[1].includes("PM"))
-        ? new Date(`${year}-12-${day}T${times[1].replace(" ", "")}:00+07:00`)
-        : new Date(startTime.getTime() + 2 * 60 * 60 * 1000);
+    if (timeMatch) {
+      let hour = parseInt(timeMatch[1]);
+      const minute = parseInt(timeMatch[2]);
+      const ampm = timeMatch[3].toUpperCase();
+      if (ampm === "PM" && hour < 12) hour += 12;
+      if (ampm === "AM" && hour === 12) hour = 0;
+      startHour = hour;
+      startMinute = minute;
+    }
 
-    const ics = generateICS({
-      title: `Nonso & Tijani: ${event.title}`,
-      start: startTime,
-      end: endTime,
-      location: event.loc,
-      description: `${event.desc}\nLocation: ${event.loc}`,
-    });
+    const startDate = new Date(
+      Date.UTC(year, month - 1, day, startHour, startMinute),
+    );
+    const endDate = new Date(startDate.getTime() + 2 * 60 * 60 * 1000);
 
-    const blob = new Blob([ics], { type: "text/calendar" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `nonso-tijani-${event.date.toLowerCase().replace(" ", "-")}.ics`;
-    a.click();
-    URL.revokeObjectURL(url);
+    const formatGCalDate = (d: Date) =>
+      d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";
+
+    const details = `${event.desc}\nLocation: ${event.loc}`;
+
+    const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(`Nonso & Tijani: ${event.title}`)}&dates=${formatGCalDate(startDate)}/${formatGCalDate(endDate)}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(event.loc)}`;
+
+    window.open(url, "_blank");
   };
 
   return (
     <button
-      onClick={handleDownload}
-      className="flex items-center gap-1.5 text-[10px] tracking-[0.1em] uppercase px-3 py-1.5 border transition-all hover:bg-[#2C5F2D] hover:text-white hover:border-[#2C5F2D]"
-      style={{ borderColor: "#E0DCD0", color: "#5A5A5A" }}
+      onClick={handleAdd}
+      className="flex items-center gap-1.5 text-[10px] tracking-[0.1em] uppercase px-3 py-1.5 border transition-all duration-200 ease-out
+             text-[#5A5A5A] border-[#E0DCD0]
+             hover:bg-[#2C5F2D] hover:text-white hover:border-[#2C5F2D]"
     >
-      <Download size={10} />
+      <Calendar size={10} />
       Add to Calendar
     </button>
   );
