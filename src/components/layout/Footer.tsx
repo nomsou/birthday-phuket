@@ -27,8 +27,6 @@ export function Footer() {
           {[
             { label: "Itinerary", href: "/itinerary" },
             { label: "Travel", href: "/travel" },
-            { label: "Gallery", href: "/gallery" },
-            { label: "RSVP", href: "/rsvp" },
           ].map((link) => (
             <Link
               key={link.href}
