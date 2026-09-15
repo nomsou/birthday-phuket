@@ -59,29 +59,30 @@ export default function EnterForm() {
   }, [router, searchParams]);
 
   const handleLogin = async () => {
-    if (!password.trim()) return;
+    if (!password.trim() || loading) return;
 
     setLoading(true);
     setError("");
+
+    const redirectTo = searchParams.get("from") || "/";
 
     try {
       const res = await fetch("/api/auth/guest-login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password }),
+        body: JSON.stringify({ password, from: redirectTo }),
       });
 
       if (res.ok) {
-        const redirectTo = searchParams.get("from") || "/";
-        router.push(redirectTo);
-        router.refresh();
-      } else {
-        const data = await res.json();
-        setError(data.error || "Incorrect access code.");
+        window.location.assign(redirectTo);
+        return; 
       }
+
+      const data = await res.json();
+      setError(data.error || "Incorrect access code.");
+      setLoading(false);
     } catch {
       setError("Something went wrong. Please try again.");
-    } finally {
       setLoading(false);
     }
   };
@@ -137,7 +138,8 @@ export default function EnterForm() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleLogin()}
-            className="w-full px-4 py-3 text-sm outline-none border border-[#E0DCD0] bg-transparent text-[#1A1A1A] rounded-lg focus:border-[#2C5F2D] transition-colors"
+            disabled={loading}
+            className="w-full px-4 py-3 text-sm outline-none border border-[#E0DCD0] bg-transparent text-[#1A1A1A] rounded-lg focus:border-[#2C5F2D] transition-colors disabled:opacity-60"
           />
 
           {error && <p className="text-xs text-red-500 text-center">{error}</p>}
@@ -145,10 +147,20 @@ export default function EnterForm() {
           <button
             onClick={handleLogin}
             disabled={loading}
-            className="w-full py-3.5 text-sm font-medium tracking-wide uppercase rounded-lg transition-all hover:opacity-90 disabled:opacity-50"
+            className="w-full py-3.5 text-sm font-medium tracking-wide uppercase rounded-lg transition-all hover:opacity-90 disabled:opacity-50 flex items-center justify-center gap-2"
             style={{ background: "#2C5F2D", color: "#F5F0E6" }}
           >
-            {loading ? "..." : "Enter"}
+            {loading ? (
+              <>
+                <span
+                  className="w-4 h-4 rounded-full border-2 border-[#F5F0E6] border-t-transparent animate-spin"
+                  aria-hidden
+                />
+                Entering…
+              </>
+            ) : (
+              "Enter"
+            )}
           </button>
         </div>
       </div>
