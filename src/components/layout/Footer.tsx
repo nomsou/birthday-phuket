@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export function Footer() {
   return (
     <footer
@@ -16,7 +14,7 @@ export function Footer() {
             Nonso & Tijani
           </p>
           <p className="text-xs leading-relaxed" style={{ color: "#5A5A5A" }}>
-            Birthday Paradise • Phuket, Thailand
+            Forty in Phuket • Phuket, Thailand
             <br />
             December 14–19, 2026
           </p>
@@ -25,17 +23,19 @@ export function Footer() {
         {/* Quick Links */}
         <nav className="flex flex-wrap justify-center gap-6 text-xs tracking-[0.15em] uppercase">
           {[
-            { label: "Itinerary", href: "/itinerary" },
-            { label: "Travel", href: "/travel" },
+            { label: "Itinerary", href: "#itinerary" },
+            { label: "Stay", href: "#stay" },
+            { label: "Gallery", href: "#gallery" },
+            { label: "FAQ", href: "#faq" },
           ].map((link) => (
-            <Link
+            <a
               key={link.href}
               href={link.href}
               className="transition-opacity hover:opacity-60"
               style={{ color: "#5A5A5A" }}
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </nav>
 
@@ -49,14 +49,14 @@ export function Footer() {
             style={{ color: "#5A5A5A" }}
           >
             Designed & Built by{" "}
-            <Link
+            <a
               href="https://www.linkedin.com/in/nomsounaogu/"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:opacity-100 transition-opacity"
             >
               Nomso
-            </Link>
+            </a>
           </p>
         </div>
       </div>
