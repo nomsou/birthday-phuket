@@ -6,37 +6,37 @@ import Image from "next/image";
 
 const FLOATING_IMAGES = [
   {
-    src: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?auto=format&fit=crop&w=400&q=75",
+    src: "/phuket/1.jpg",
     className: "top-[10%] left-[14%] w-40 h-28 md:w-56 md:h-40",
     delay: "0s",
     duration: "16s",
   },
   {
-    src: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=400&q=75",
+    src: "/phuket/2.jpg",
     className: "top-[10%] right-[14%] w-36 h-24 md:w-52 md:h-36",
     delay: "3s",
     duration: "20s",
   },
   {
-    src: "https://images.unsplash.com/photo-1537956965359-7573183d1f57?auto=format&fit=crop&w=400&q=75",
+    src: "/phuket/3.jpg",
     className: "bottom-[10%] left-[14%] w-44 h-32 md:w-60 md:h-44",
     delay: "6s",
     duration: "18s",
   },
   {
-    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=75",
+    src: "/phuket/4.jpg",
     className: "bottom-[10%] right-[14%] w-40 h-28 md:w-56 md:h-40",
     delay: "2s",
     duration: "22s",
   },
   {
-    src: "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=400&q=75",
+    src: "/phuket/5.jpg",
     className: "top-[42%] left-[10%] w-32 h-24 md:w-44 md:h-32",
     delay: "8s",
     duration: "17s",
   },
   {
-    src: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&w=400&q=75",
+    src: "/phuket/6.jpg",
     className: "top-[42%] right-[10%] w-32 h-24 md:w-44 md:h-32",
     delay: "5s",
     duration: "19s",
@@ -103,6 +103,7 @@ export default function EnterForm() {
             fill
             sizes="240px"
             className="object-cover"
+            priority={i < 4}
           />
         </div>
       ))}
