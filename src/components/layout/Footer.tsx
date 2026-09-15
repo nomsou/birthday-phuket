@@ -1,11 +1,18 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 export function Footer() {
+  const pathname = usePathname();
+
+  if (pathname === "/enter") return null;
+
   return (
     <footer
       className="mt-auto border-t px-6 py-12 bg-[#F5F0E6]"
       style={{ borderColor: "#E0DCD0" }}
     >
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        {/* Brand */}
         <div className="text-center md:text-left">
           <p
             className="text-sm font-medium tracking-[0.2em] uppercase mb-2"
@@ -20,7 +27,6 @@ export function Footer() {
           </p>
         </div>
 
-        {/* Quick Links */}
         <nav className="flex flex-wrap justify-center gap-6 text-xs tracking-[0.15em] uppercase">
           {[
             { label: "Itinerary", href: "#itinerary" },
@@ -39,7 +45,6 @@ export function Footer() {
           ))}
         </nav>
 
-        {/* Copyright / Credit */}
         <div className="text-center md:text-right">
           <p className="text-xs" style={{ color: "#5A5A5A" }}>
             © {new Date().getFullYear()} Private Event

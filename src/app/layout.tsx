@@ -7,8 +7,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Nonso & Tijani | Birthday Paradise",
-    template: "%s | Nonso & Tijani",
+    default: "Forty in Phuket - Nonso & Tijani",
+    template: "%s",
   },
   description:
     "Private birthday celebration in Phuket, Thailand. Dec 14-19, 2026.",
@@ -26,7 +26,7 @@ export default function RootLayout({
           <GlobalLoader />
         </Suspense>
         <Navbar />
-        <main className="flex-1 pt-20">{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>
