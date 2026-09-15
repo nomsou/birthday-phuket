@@ -14,7 +14,11 @@ export function Footer() {
       style={{ borderColor: "#E0DCD0" }}
     >
       <div className="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="relative w-40 h-40 shrink-0">
+        <a
+          href="#top"
+          aria-label="Back to top"
+          className="relative w-40 h-40 shrink-0 block transition-transform hover:scale-105"
+        >
           <Image
             src="/logo.png"
             alt="Forty in Phuket"
@@ -22,14 +26,14 @@ export function Footer() {
             sizes="160px"
             className="object-contain"
           />
-        </div>
+        </a>
 
         <div className="text-center md:text-left">
           <p
             className="text-sm font-medium tracking-[0.2em] uppercase mb-2"
             style={{ color: "#2C5F2D" }}
           >
-            FORUTY IN PHUKET
+            FORTY IN PHUKET
           </p>
           <p className="text-xs leading-relaxed" style={{ color: "#5A5A5A" }}>
             Phuket, Thailand
@@ -48,7 +52,7 @@ export function Footer() {
             <a
               key={link.href}
               href={link.href}
-              className="transition-opacity hover:opacity-60"
+              className="font-semibold transition-colors duration-200 hover:text-[#2C5F2D]"
               style={{ color: "#5A5A5A" }}
             >
               {link.label}

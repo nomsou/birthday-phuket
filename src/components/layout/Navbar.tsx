@@ -41,7 +41,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-xs tracking-[0.15em] uppercase transition-opacity hover:opacity-60"
+              className="text-xs font-semibold tracking-[0.15em] uppercase transition-colors duration-200 hover:text-[#2C5F2D]"
               style={{ color: "#5A5A5A" }}
             >
               {link.label}
@@ -67,7 +67,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-2xl font-medium tracking-[0.1em] uppercase"
+                className="text-2xl font-semibold tracking-[0.1em] uppercase transition-colors duration-200"
                 style={{ color: "#1A1A1A" }}
               >
                 {link.label}
