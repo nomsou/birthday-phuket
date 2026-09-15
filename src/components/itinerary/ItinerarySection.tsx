@@ -3,78 +3,88 @@ import { DayCard, type ItineraryDay } from "./Daycard";
 export const ITINERARY_DAYS: ItineraryDay[] = [
   {
     day: "Monday",
-    date: "Dec 14",
+    date: "Dec 14, 2026",
     title: "TOUCHDOWN, PHUKET",
     subtitle: "Welcome Cocktails",
-    body: [
-      "Arrive, check in, switch to holiday mode.",
-      "That evening, we're getting everyone together for welcome cocktails, good music and the official start of Forty in Phuket.",
+    description:
+      "Your adventure begins the moment you touch down. Phuket is a world of extraordinary contrasts - limestone cliffs rising from turquoise water, longtail boats drifting past palm-fringed shores, and a warmth that meets you before you even leave the airport. Settle in, and when you're ready, we'll gather for welcome cocktails to officially open Forty in Phuket.",
+    activities: [
+      { label: "Afternoon", detail: "Arrivals & check-in at the resort" },
+      { label: "Evening", detail: "Welcome cocktails by the pool" },
     ],
+    image: "/itinerary/1.jpg",
   },
   {
     day: "Tuesday",
-    date: "Dec 15",
+    date: "Dec 15, 2026",
     title: "GAME ON",
     subtitle: "Tijani's 40th Birthday",
-    body: [
-      "We're kicking things off with a proper sports day.",
-      "Teams, games, competition, plenty of laughs and serious bragging rights on the line.",
-      "Then it's time to reset, get dressed and celebrate Tijani at 40.",
+    description:
+      "We're kicking things off with a proper sports day. Teams, games, competition, plenty of laughs and serious bragging rights on the line. The morning belongs to the playing field; the evening belongs to Tijani. Reset, get dressed, and celebrate forty years of the man who brought us all to Phuket.",
+    activities: [
+      { label: "Morning", detail: "Sports day — teams, games, competition" },
+      { label: "Evening", detail: "Tijani's 40th birthday celebration" },
     ],
+    image: "/itinerary/2.jpg",
   },
   {
     day: "Wednesday",
-    date: "Dec 16",
+    date: "Dec 16, 2026",
     title: "SPA DAYS & SIDE QUESTS",
     subtitle: "Bundi's Brunch & Wellness Day · Guys' Day Out",
-    body: [
-      "Divide and conquer.",
-      "The ladies are heading for brunch, spa treatments and a full day of relaxation.",
-      "The guys? They have Phuket, a free afternoon and their own agenda.",
-      "We'll compare stories later.",
+    description:
+      "Divide and conquer. The ladies are heading for brunch, spa treatments and a full day of relaxation. The guys? They have Phuket, a free afternoon and their own agenda. We'll compare stories later. However you spend the day, come back rested — the week is only getting started.",
+    activities: [
+      { label: "Morning", detail: "Bundi's brunch & wellness day" },
+      { label: "Afternoon", detail: "Guys' day out — Phuket at your leisure" },
     ],
+    image: "/itinerary/3.jpg",
   },
   {
     day: "Thursday",
-    date: "Dec 17",
+    date: "Dec 17, 2026",
     title: "DOUBLE TROUBLE",
     subtitle: "Chinua Turns 5 · Nonso Turns 40",
-    body: [
-      "Same birthday. Very different numbers.",
-      "We start with a family fun day for Chinua's 5th birthday, with games, activities and plenty for the kids to get stuck into.",
-      "Then the day shifts gears.",
-      "Tonight, it's all about Nonso at 40.",
-      "Forty years. One big night. And everyone we love in Phuket to celebrate it.",
+    description:
+      "Same birthday. Very different numbers. We start with a family fun day for Chinua's 5th birthday, with games, activities and plenty for the kids to get stuck into. Then the day shifts gears. Tonight, it's all about Nonso at 40 — forty years, one big night, and everyone we love in Phuket to celebrate it.",
+    activities: [
+      { label: "Afternoon", detail: "Family fun day — Chinua's 5th birthday" },
+      { label: "Evening", detail: "Nonso's 40th birthday celebration" },
     ],
+    image: "/itinerary/4.jpg",
   },
   {
     day: "Friday",
-    date: "Dec 18",
+    date: "Dec 18, 2026",
     title: "GONE YACHTING",
     subtitle: "Phi Phi Yacht Party",
-    body: [
-      "Swimsuits on. We're taking this party to sea.",
-      "Six hours aboard our private yacht exploring the waters around Phi Phi. Swim, kayak, stop at the islands, eat, drink, dance and take in some ridiculous views along the way.",
-      "Then we sail into sunset. Because obviously.",
+    description:
+      "Swimsuits on. We're taking this party to sea. Six hours aboard our private yacht exploring the waters around Phi Phi. Swim, kayak, stop at the islands, eat, drink, dance and take in some ridiculous views along the way. Then we sail into sunset. Because obviously.",
+    activities: [
+      { label: "All day", detail: "Private yacht charter to Phi Phi" },
+      { label: "Evening", detail: "Sunset sail back to Phuket" },
     ],
+    image: "/itinerary/5.jpg",
   },
   {
     day: "Saturday",
-    date: "Dec 19",
+    date: "Dec 19, 2026",
     title: "ONE FOR THE ROAD",
     subtitle: "Breakfast & Departure",
-    body: [
-      "One last breakfast. One last round of hugs. One last attempt to work out how the week went by so quickly.",
-      "Then it's time to head home with full camera rolls, excellent stories and plans to do it all again someday.",
-      "Until next time.",
+    description:
+      "One last breakfast. One last round of hugs. One last attempt to work out how the week went by so quickly. Then it's time to head home with full camera rolls, excellent stories and plans to do it all again someday. Until next time.",
+    activities: [
+      { label: "Morning", detail: "Farewell breakfast at the resort" },
+      { label: "Afternoon", detail: "Departures & airport transfers" },
     ],
+    image: "/itinerary/6.jpg",
   },
 ];
 
 export function ItinerarySection() {
   return (
     <section id="itinerary" className="px-6 py-20 bg-[#F5F0E6]">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 space-y-3">
           <p
             className="text-xs tracking-[0.3em] uppercase"
