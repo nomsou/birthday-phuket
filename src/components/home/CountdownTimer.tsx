@@ -20,7 +20,7 @@ function calculateTimeLeft() {
   };
 }
 
-export function CountdownTimer() {
+export function CountdownTimer({ dark = false }: { dark?: boolean }) {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft);
   const [mounted, setMounted] = useState(false);
 
@@ -34,7 +34,6 @@ export function CountdownTimer() {
 
   const pad = (n: number) => n.toString().padStart(2, "0");
 
-  // Don't render actual values until mounted to avoid hydration mismatch
   const display = mounted
     ? timeLeft
     : { days: 0, hours: 0, minutes: 0, seconds: 0 };
@@ -49,18 +48,26 @@ export function CountdownTimer() {
       ].map((item, i) => (
         <div key={i} className="text-center">
           <div
-            className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full border text-lg md:text-xl font-medium"
-            style={{
-              borderColor: "#E0DCD0",
-              color: "#2C5F2D",
-              background: "rgba(44, 95, 45, 0.04)",
-            }}
+            className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full border text-lg md:text-xl font-medium backdrop-blur-sm"
+            style={
+              dark
+                ? {
+                    borderColor: "rgba(255,255,255,0.3)",
+                    color: "#F5F0E6",
+                    background: "rgba(255,255,255,0.1)",
+                  }
+                : {
+                    borderColor: "#E0DCD0",
+                    color: "#2C5F2D",
+                    background: "rgba(44, 95, 45, 0.04)",
+                  }
+            }
           >
             {pad(item.value)}
           </div>
           <p
             className="text-[10px] tracking-[0.15em] uppercase mt-2"
-            style={{ color: "#5A5A5A" }}
+            style={{ color: dark ? "rgba(255,255,255,0.7)" : "#5A5A5A" }}
           >
             {item.label}
           </p>

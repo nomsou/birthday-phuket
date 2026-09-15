@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <main className="pt-20">
+    <main >
       <Hero />
       <ItinerarySection />
       <StaySection />
