@@ -24,20 +24,33 @@ export function FaqItem({
         >
           {question}
         </span>
-        {open ? (
-          <X size={16} className="shrink-0" style={{ color: "#5A5A5A" }} />
-        ) : (
-          <Plus size={16} className="shrink-0" style={{ color: "#5A5A5A" }} />
-        )}
-      </button>
-      {open && (
-        <p
-          className="text-sm leading-relaxed pb-5"
-          style={{ color: "#5A5A5A" }}
+        <span
+          className="shrink-0 transition-transform duration-300 ease-out"
+          style={{
+            transform: open ? "rotate(90deg)" : "rotate(0deg)",
+            color: "#5A5A5A",
+          }}
         >
-          {answer}
-        </p>
-      )}
+          {open ? <X size={16} /> : <Plus size={16} />}
+        </span>
+      </button>
+
+      {/* Animated height using grid-template-rows */}
+      <div
+        className="grid transition-[grid-template-rows] duration-300 ease-out"
+        style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
+      >
+        <div className="overflow-hidden">
+          <p
+            className={`text-sm leading-relaxed pb-5 transition-opacity duration-300 ${
+              open ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ color: "#5A5A5A" }}
+          >
+            {answer}
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

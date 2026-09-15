@@ -54,79 +54,91 @@ export function DayCard({
           </p>
         </div>
         <ChevronDown
-          className={`shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`shrink-0 transition-transform duration-300 ease-out ${
+            open ? "rotate-180" : "rotate-0"
+          }`}
           size={18}
           style={{ color: "#2C5F2D" }}
         />
       </button>
 
-      {/* Expanded content — two columns on desktop, stacked on mobile */}
-      {open && (
-        <div className="px-6 md:px-10 pb-10 md:pb-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
-            {/* Left: description + activities */}
-            <div className="space-y-8">
-              <div>
-                <h4
-                  className="text-2xl md:text-3xl mb-4"
-                  style={{
-                    color: "#1A1A1A",
-                    fontFamily: "'Playfair Display', serif",
-                  }}
-                >
-                  Description
-                </h4>
-                <p
-                  className="text-base leading-relaxed"
-                  style={{ color: "#5A5A5A" }}
-                >
-                  {day.description}
-                </p>
-              </div>
+      {/* Animated expand/collapse */}
+      <div
+        className="grid transition-[grid-template-rows] duration-500 ease-out"
+        style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
+      >
+        <div className="overflow-hidden">
+          {/* Inner padding lives here so it collapses cleanly */}
+          <div
+            className={`px-6 md:px-10 pb-10 md:pb-12 transition-opacity duration-500 ${
+              open ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+              {/* Left: description + activities */}
+              <div className="space-y-8">
+                <div>
+                  <h4
+                    className="text-2xl md:text-3xl mb-4"
+                    style={{
+                      color: "#1A1A1A",
+                      fontFamily: "'Playfair Display', serif",
+                    }}
+                  >
+                    Description
+                  </h4>
+                  <p
+                    className="text-base leading-relaxed"
+                    style={{ color: "#5A5A5A" }}
+                  >
+                    {day.description}
+                  </p>
+                </div>
 
-              <div>
-                <h4
-                  className="text-2xl md:text-3xl mb-4"
-                  style={{
-                    color: "#1A1A1A",
-                    fontFamily: "'Playfair Display', serif",
-                  }}
-                >
-                  Activities
-                </h4>
-                <ul className="space-y-3">
-                  {day.activities.map((a, i) => (
-                    <li
-                      key={i}
-                      className="text-base leading-relaxed"
-                      style={{ color: "#5A5A5A" }}
-                    >
-                      <span
-                        className="font-medium"
-                        style={{ color: "#1A1A1A" }}
+                <div>
+                  <h4
+                    className="text-2xl md:text-3xl mb-4"
+                    style={{
+                      color: "#1A1A1A",
+                      fontFamily: "'Playfair Display', serif",
+                    }}
+                  >
+                    Activities
+                  </h4>
+                  <ul className="space-y-3">
+                    {day.activities.map((a, i) => (
+                      <li
+                        key={i}
+                        className="text-base leading-relaxed"
+                        style={{ color: "#5A5A5A" }}
                       >
-                        {a.label}
-                      </span>{" "}
-                      — {a.detail}
-                    </li>
-                  ))}
-                </ul>
+                        <span
+                          className="font-medium"
+                          style={{ color: "#1A1A1A" }}
+                        >
+                          {a.label}
+                        </span>{" "}
+                        — {a.detail}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
 
-            {/* Right: image */}
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-[#E0DCD0]">
-              <Image
-                src={day.image}
-                alt={day.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-              />
+              {/* Right: image */}
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-[#E0DCD0]">
+                <Image
+                  src={day.image}
+                  alt={day.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
