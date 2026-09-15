@@ -1,7 +1,8 @@
+// src/components/home/CountdownTimer.tsx
 "use client";
 import { useState, useEffect } from "react";
 
-const TARGET_DATE = new Date("2026-12-14T00:00:00+07:00").getTime(); // Phuket time (UTC+7)
+const TARGET_DATE = new Date("2026-12-14T00:00:00+07:00").getTime();
 
 function calculateTimeLeft() {
   const now = Date.now();
@@ -20,10 +21,11 @@ function calculateTimeLeft() {
 }
 
 export function CountdownTimer() {
-  // Initialize with actual calculation instead of zeros
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const interval = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
@@ -32,14 +34,18 @@ export function CountdownTimer() {
 
   const pad = (n: number) => n.toString().padStart(2, "0");
 
+  // Don't render actual values until mounted to avoid hydration mismatch
+  const display = mounted
+    ? timeLeft
+    : { days: 0, hours: 0, minutes: 0, seconds: 0 };
+
   return (
-    // suppressHydrationWarning prevents console errors for minor ms differences
-    <div className="flex items-center gap-3 md:gap-5" suppressHydrationWarning>
+    <div className="flex items-center gap-3 md:gap-5">
       {[
-        { value: timeLeft.days, label: "Days" },
-        { value: timeLeft.hours, label: "Hours" },
-        { value: timeLeft.minutes, label: "Mins" },
-        { value: timeLeft.seconds, label: "Secs" },
+        { value: display.days, label: "Days" },
+        { value: display.hours, label: "Hours" },
+        { value: display.minutes, label: "Mins" },
+        { value: display.seconds, label: "Secs" },
       ].map((item, i) => (
         <div key={i} className="text-center">
           <div

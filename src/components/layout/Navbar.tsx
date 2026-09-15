@@ -1,8 +1,10 @@
+// src/components/layout/Navbar.tsx
 "use client";
 
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image"; // Import Image
 
 const links = [
   { href: "#itinerary", label: "Itinerary" },
@@ -18,15 +20,19 @@ export function Navbar() {
     <>
       {/* Desktop Header */}
       <header
-        className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-12 py-5 bg-[#F5F0E6]/90 backdrop-blur-md border-b"
+        className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-12 py-4 bg-[#F5F0E6]/90 backdrop-blur-md border-b"
         style={{ borderColor: "#E0DCD0" }}
       >
-        <a
-          href="#top"
-          className="text-sm font-medium tracking-[0.2em] uppercase transition-opacity hover:opacity-70"
-          style={{ color: "#2C5F2D" }}
-        >
-          Nonso & Tijani
+        <a href="#top" className="flex items-center gap-3 group">
+          <div className="absolute w-25 h-25 transition-transform group-hover:scale-105">
+            <Image
+              src="/logo.png"
+              alt="NT Logo"
+              fill
+              sizes="100px"
+              className="object-contain"
+            />
+          </div>
         </a>
 
         {/* Desktop Nav */}
