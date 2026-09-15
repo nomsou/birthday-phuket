@@ -46,7 +46,7 @@ export function StaySection() {
         </div>
 
         {/* Two columns: content (left) + sticky image (right) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
           {/* Left — scrollable content */}
           <div className="space-y-12">
             {/* Secure Your Stay */}
@@ -236,20 +236,7 @@ export function StaySection() {
                 ))}
               </div>
 
-              {/* Optional dots */}
-              <div className="flex justify-center gap-2 mt-4">
-                {STAY_IMAGES.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActiveIndex(i)}
-                    aria-label={`Show image ${i + 1}`}
-                    className="w-1.5 h-1.5 rounded-full transition-colors duration-300"
-                    style={{
-                      background: i === activeIndex ? "#2C5F2D" : "#E0DCD0",
-                    }}
-                  />
-                ))}
-              </div>
+
             </div>
           </div>
         </div>
