@@ -8,12 +8,12 @@ import { FaqSection } from "@/components/faq/FaqSection";
 export const metadata: Metadata = {
   title: "Forty in Phuket - Nonso & Tijani",
   description:
-    "An excellent reason to celebrate. Phuket, Thailand — Dec 14-19, 2026.",
+    "An excellent reason to celebrate. Phuket, Thailand. Dec 14-19, 2026.",
 };
 
 export default function HomePage() {
   return (
-    <main >
+    <main>
       <Hero />
       <ItinerarySection />
       <StaySection />

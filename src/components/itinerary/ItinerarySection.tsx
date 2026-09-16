@@ -7,9 +7,9 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
     title: "TOUCHDOWN, PHUKET",
     subtitle: "Welcome Cocktails",
     description:
-      "Your adventure begins the moment you touch down. Phuket is a world of extraordinary contrasts - limestone cliffs rising from turquoise water, longtail boats drifting past palm-fringed shores, and a warmth that meets you before you even leave the airport. Settle in, and when you're ready, we'll gather for welcome cocktails to officially open Forty in Phuket.",
+      "Your adventure begins the moment you touch down. Phuket is a world of extraordinary contrasts: limestone cliffs rising from turquoise water, longtail boats drifting past palm-fringed shores, and a warmth that meets you before you even leave the airport. Settle in, and when you're ready, we'll gather for welcome cocktails to officially open Forty in Phuket.",
     activities: [
-      { label: "Afternoon", detail: "Arrivals & check-in at the resort" },
+      { label: "Afternoon", detail: "Arrivals and check-in at the resort" },
       { label: "Evening", detail: "Welcome cocktails by the pool" },
     ],
     image: "/itinerary/1.jpg",
@@ -22,7 +22,10 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
     description:
       "We're kicking things off with a proper sports day. Teams, games, competition, plenty of laughs and serious bragging rights on the line. The morning belongs to the playing field; the evening belongs to Tijani. Reset, get dressed, and celebrate forty years of the man who brought us all to Phuket.",
     activities: [
-      { label: "Morning", detail: "Sports day — teams, games, competition" },
+      {
+        label: "Morning",
+        detail: "Sports day with teams, games and competition",
+      },
       { label: "Evening", detail: "Tijani's 40th birthday celebration" },
     ],
     image: "/itinerary/2.jpg",
@@ -33,10 +36,10 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
     title: "SPA DAYS & SIDE QUESTS",
     subtitle: "Bundi's Brunch & Wellness Day · Guys' Day Out",
     description:
-      "Divide and conquer. The ladies are heading for brunch, spa treatments and a full day of relaxation. The guys? They have Phuket, a free afternoon and their own agenda. We'll compare stories later. However you spend the day, come back rested — the week is only getting started.",
+      "Divide and conquer. The ladies are heading for brunch, spa treatments and a full day of relaxation. The guys? They have Phuket, a free afternoon and their own agenda. We'll compare stories later. However you spend the day, come back rested. The week is only getting started.",
     activities: [
-      { label: "Morning", detail: "Bundi's brunch & wellness day" },
-      { label: "Afternoon", detail: "Guys' day out — Phuket at your leisure" },
+      { label: "Morning", detail: "Bundi's brunch and wellness day" },
+      { label: "Afternoon", detail: "Guys' day out, Phuket at your leisure" },
     ],
     image: "/itinerary/3.jpg",
   },
@@ -46,9 +49,12 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
     title: "DOUBLE TROUBLE",
     subtitle: "Chinua Turns 5 · Nonso Turns 40",
     description:
-      "Same birthday. Very different numbers. We start with a family fun day for Chinua's 5th birthday, with games, activities and plenty for the kids to get stuck into. Then the day shifts gears. Tonight, it's all about Nonso at 40 — forty years, one big night, and everyone we love in Phuket to celebrate it.",
+      "Same birthday. Very different numbers. We start with a family fun day for Chinua's 5th birthday, with games, activities and plenty for the kids to get stuck into. Then the day shifts gears. Tonight, it's all about Nonso at 40. Forty years, one big night, and everyone we love in Phuket to celebrate it.",
     activities: [
-      { label: "Afternoon", detail: "Family fun day — Chinua's 5th birthday" },
+      {
+        label: "Afternoon",
+        detail: "Family fun day for Chinua's 5th birthday",
+      },
       { label: "Evening", detail: "Nonso's 40th birthday celebration" },
     ],
     image: "/itinerary/4.jpg",
@@ -75,7 +81,7 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
       "One last breakfast. One last round of hugs. One last attempt to work out how the week went by so quickly. Then it's time to head home with full camera rolls, excellent stories and plans to do it all again someday. Until next time.",
     activities: [
       { label: "Morning", detail: "Farewell breakfast at the resort" },
-      { label: "Afternoon", detail: "Departures & airport transfers" },
+      { label: "Afternoon", detail: "Departures and airport transfers" },
     ],
     image: "/itinerary/6.jpg",
   },
@@ -102,7 +108,7 @@ export function ItinerarySection() {
             Forty in Phuket Itinerary
           </h2>
           <p className="text-sm" style={{ color: "#5A5A5A" }}>
-            Six days on the Andaman coast — celebration, sea, and the people you
+            Six days on the Andaman coast. Celebration, sea, and the people you
             love most.
           </p>
         </div>

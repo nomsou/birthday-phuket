@@ -5,7 +5,7 @@ export function AddTripToCalendarButton() {
     const start = "20261214";
     const end = "20261220"; // Google Calendar end date is exclusive
 
-    const details = "Forty in Phuket — Nonso & Tijani's 40th celebration.";
+    const details = "Forty in Phuket. Nonso & Tijani's 40th celebration.";
 
     const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
       "Forty in Phuket",

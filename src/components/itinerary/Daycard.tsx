@@ -117,8 +117,8 @@ export function DayCard({
                           style={{ color: "#1A1A1A" }}
                         >
                           {a.label}
-                        </span>{" "}
-                        — {a.detail}
+                        </span>
+                        : {a.detail}
                       </li>
                     ))}
                   </ul>

@@ -149,7 +149,7 @@ export function StaySection() {
                 Fly into Phuket International Airport (HKT). Direct flights are
                 available from several major hubs, and connecting flights are
                 common via Bangkok, Singapore, or Hong Kong. Airport transfers
-                to the resort can be arranged by the planning team — share your
+                to the resort can be arranged by the planning team. Share your
                 flight details ahead of arrival so pickup is seamless.
               </p>
             </div>
@@ -171,7 +171,7 @@ export function StaySection() {
                 className="text-sm leading-relaxed mb-6"
                 style={{ color: "#5A5A5A" }}
               >
-                Familiarise yourself with everything Phuket has to offer — and
+                Familiarise yourself with everything Phuket has to offer, and
                 let the anticipation begin.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -235,8 +235,6 @@ export function StaySection() {
                   />
                 ))}
               </div>
-
-
             </div>
           </div>
         </div>
