@@ -77,23 +77,12 @@ export function DayCard({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
               {/* Left: description + activities */}
               <div className="space-y-8">
-                <div>
-                  <h4
-                    className="text-2xl md:text-3xl mb-4"
-                    style={{
-                      color: "#1A1A1A",
-                      fontFamily: "'Playfair Display', serif",
-                    }}
-                  >
-                    Description
-                  </h4>
-                  <p
-                    className="text-base leading-relaxed"
-                    style={{ color: "#5A5A5A" }}
-                  >
-                    {day.description}
-                  </p>
-                </div>
+                <p
+                  className="text-base leading-relaxed"
+                  style={{ color: "#5A5A5A" }}
+                >
+                  {day.description}
+                </p>
 
                 <div>
                   <h4
