@@ -21,8 +21,8 @@ export function Hero() {
 
       <div className="absolute inset-0 bg-black/40" />
 
-      <div className="relative z-10 flex flex-col items-center">
-        <div className="mb-8 brightness-0 invert  [&_div.relative]:!w-36 [&_div.relative]:!h-36 md:[&_div.relative]:!w-48 md:[&_div.relative]:!h-48">
+      <div className="relative z-10 flex flex-col items-center -mt-28 md:mt-0">
+        <div className="hidden md:block mb-8 brightness-0 invert [&_div.relative]:!w-36 [&_div.relative]:!h-36 md:[&_div.relative]:!w-48 md:[&_div.relative]:!h-48">
           <Logo variant="mark" />
         </div>
 
@@ -37,7 +37,7 @@ export function Hero() {
             className="text-base md:text-lg italic text-white/80 drop-shadow"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            An excellent reason to celebrate.
+            Nonso and Tijani turn 40, an excellent reason to celebrate
           </p>
           <p className="text-sm md:text-base text-white/70 drop-shadow">
             Phuket, Thailand • Dec 14–19, 2026

@@ -25,7 +25,7 @@ export function Navbar() {
         className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-12 py-4 bg-[#F5F0E6]/90 backdrop-blur-md border-b"
         style={{ borderColor: "#E0DCD0" }}
       >
-        <a href="#top" className="flex items-center gap-3 group">
+        <a href="#top" className="flex items-center gap-3 group -ml-6">
           <div className="absolute w-25 h-25 transition-transform group-hover:scale-105">
             <Image
               src="/logo.png"
