@@ -10,7 +10,6 @@ const adminEmails =
     .filter(Boolean) ?? [];
 
 const SITE_URL = "https://fortyinphuket.com";
-const HERO_IMAGE = `${SITE_URL}/email/hero.jpg`;
 
 // Shared email wrapper — brand-consistent shell for both emails
 function emailShell({ preheader, body }: { preheader: string; body: string }) {
@@ -33,16 +32,19 @@ function emailShell({ preheader, body }: { preheader: string; body: string }) {
       <td align="center">
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px; width:100%; background-color:#FFFFFF; border-radius:16px; overflow:hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06);">
 
-          <!-- Hero image -->
+          <!-- Header strip -->
           <tr>
-            <td style="padding:0; line-height:0;">
-              <img src="${HERO_IMAGE}" alt="Phuket" width="600" style="display:block; width:100%; max-width:600px; height:auto; border:0; outline:none; text-decoration:none;" />
+            <td style="padding: 32px 40px 0 40px; text-align:center;">
+              <p style="margin:0; font-family: Georgia, 'Times New Roman', serif; font-size:11px; letter-spacing: 0.3em; text-transform: uppercase; color:#2C5F2D;">
+                Forty in Phuket
+              </p>
+              <div style="margin: 12px auto 0 auto; width: 40px; height: 1px; background-color:#E0DCD0;"></div>
             </td>
           </tr>
 
           <!-- Body -->
           <tr>
-            <td style="padding: 40px 40px 48px 40px;">
+            <td style="padding: 32px 40px 48px 40px;">
               ${body}
             </td>
           </tr>
@@ -96,7 +98,7 @@ export async function POST(req: NextRequest) {
     // Guest confirmation email body
     const guestBody = `
       <h1 style="margin:0 0 20px 0; font-family: 'Playfair Display', Georgia, serif; font-size:28px; font-weight:500; line-height:1.25; color:#2C5F2D;">
-        You're confirmed!.
+        You're confirmed.
       </h1>
 
       <p style="margin:0 0 16px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size:15px; line-height:1.6; color:#1A1A1A;">
