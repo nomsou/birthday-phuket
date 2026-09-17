@@ -16,6 +16,7 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
+      <RsvpSection />
       <ItinerarySection />
       <RsvpSection />
       <StaySection />
