@@ -75,7 +75,7 @@ export default function EnterForm() {
 
       if (res.ok) {
         window.location.assign(redirectTo);
-        return; 
+        return;
       }
 
       const data = await res.json();
@@ -110,15 +110,15 @@ export default function EnterForm() {
       ))}
 
       <div className="relative z-10 w-full max-w-md bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-10 space-y-6">
-        <div className="text-center space-y-2">
+        <div className="text-center space-y-3">
           <h1
-            className="text-3xl font-semibold"
+            className="text-4xl md:text-5xl font-semibold"
             style={{
               color: "#2C5F2D",
               fontFamily: "'Playfair Display', serif",
             }}
           >
-            Private Access
+            Forty in Phuket!
           </h1>
           <p
             className="text-sm italic"
@@ -127,7 +127,7 @@ export default function EnterForm() {
               fontFamily: "'Playfair Display', serif",
             }}
           >
-            Forty in Phuket!
+            A celebration for Nonso and Tijani
           </p>
         </div>
 
