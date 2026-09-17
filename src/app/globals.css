@@ -54,3 +54,13 @@ h3,
 ::-webkit-scrollbar-thumb:hover {
   background: #c8c4b8;
 }
+
+@keyframes arrow-slide {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}

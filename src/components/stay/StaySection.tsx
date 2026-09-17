@@ -65,8 +65,6 @@ export function StaySection() {
                 {[
                   {
                     name: "Phuket Marriott Resort & Spa, Merlin Beach",
-                    tag: "[Main Celebration]",
-                    dates: "December 14th - 19th",
                   },
                 ].map((stay) => (
                   <div
@@ -81,17 +79,22 @@ export function StaySection() {
                       >
                         {stay.name}
                       </p>
-                      <p className="text-xs mt-1" style={{ color: "#5A5A5A" }}>
-                        {stay.tag} · {stay.dates}
-                      </p>
                     </div>
                     <a
                       href="https://www.marriott.com/en-us/hotels/hktmb-phuket-marriott-resort-and-spa-merlin-beach/overview/"
-                      className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-[#2C5F2D]"
+                      className="group inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-colors duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D]"
                       style={{ color: "#1A1A1A" }}
                     >
                       Reserve Your Room
-                      <span aria-hidden>→</span>
+                      <span
+                        aria-hidden
+                        className="inline-block"
+                        style={{
+                          animation: "arrow-slide 1.4s ease-in-out infinite",
+                        }}
+                      >
+                        →
+                      </span>
                     </a>
                   </div>
                 ))}
