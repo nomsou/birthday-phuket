@@ -82,7 +82,7 @@ export function RsvpSection() {
                 fontFamily: "'Playfair Display', serif",
               }}
             >
-              You're confirmed.
+              You're confirmed!.
             </h3>
             <p className="text-sm" style={{ color: "#5A5A5A" }}>
               A confirmation email is on its way. We can't wait to celebrate
@@ -107,7 +107,8 @@ export function RsvpSection() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-                className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors"
+                disabled={submitting}
+                className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors disabled:opacity-60"
                 style={{ borderColor: "#E0DCD0", color: "#1A1A1A" }}
               />
             </div>
@@ -124,7 +125,8 @@ export function RsvpSection() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors"
+                disabled={submitting}
+                className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors disabled:opacity-60"
                 style={{ borderColor: "#E0DCD0", color: "#1A1A1A" }}
               />
             </div>
@@ -135,7 +137,8 @@ export function RsvpSection() {
                 id="plusOne"
                 checked={plusOne}
                 onChange={(e) => setPlusOne(e.target.checked)}
-                className="w-4 h-4"
+                disabled={submitting}
+                className="w-4 h-4 disabled:opacity-60"
               />
               <label
                 htmlFor="plusOne"
@@ -158,7 +161,8 @@ export function RsvpSection() {
                   type="text"
                   value={plusOneName}
                   onChange={(e) => setPlusOneName(e.target.value)}
-                  className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors"
+                  disabled={submitting}
+                  className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors disabled:opacity-60"
                   style={{ borderColor: "#E0DCD0", color: "#1A1A1A" }}
                 />
               </div>
@@ -175,7 +179,8 @@ export function RsvpSection() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 rows={3}
-                className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors resize-none"
+                disabled={submitting}
+                className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors resize-none disabled:opacity-60"
                 style={{ borderColor: "#E0DCD0", color: "#1A1A1A" }}
               />
             </div>
@@ -187,10 +192,20 @@ export function RsvpSection() {
             <button
               type="submit"
               disabled={submitting}
-              className="w-full py-3.5 text-sm font-medium tracking-wide uppercase rounded-lg transition-all hover:opacity-90 disabled:opacity-50"
+              className="w-full py-3.5 text-sm font-medium tracking-wide uppercase rounded-lg transition-all hover:opacity-90 disabled:opacity-50 flex items-center justify-center gap-2"
               style={{ background: "#2C5F2D", color: "#F5F0E6" }}
             >
-              {submitting ? "Submitting..." : "Confirm My Spot"}
+              {submitting ? (
+                <>
+                  <span
+                    className="w-4 h-4 rounded-full border-2 border-[#F5F0E6] border-t-transparent animate-spin"
+                    aria-hidden
+                  />
+                  Submitting…
+                </>
+              ) : (
+                "Confirm My Spot"
+              )}
             </button>
           </form>
         )}
