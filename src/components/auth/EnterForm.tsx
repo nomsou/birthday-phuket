@@ -7,37 +7,37 @@ import Image from "next/image";
 const FLOATING_IMAGES = [
   {
     src: "/phuket/1.jpg",
-    className: "top-[10%] left-[14%] w-40 h-28 md:w-56 md:h-40",
+    className: "top-[10%] left-[14%] w-40 h-28 md:w-52 md:h-36",
     delay: "0s",
     duration: "16s",
   },
   {
     src: "/phuket/2.jpg",
-    className: "top-[10%] right-[14%] w-36 h-24 md:w-52 md:h-36",
+    className: "top-[10%] right-[14%] w-40 h-28 md:w-52 md:h-36",
     delay: "3s",
     duration: "20s",
   },
   {
     src: "/phuket/3.jpg",
-    className: "bottom-[10%] left-[14%] w-44 h-32 md:w-60 md:h-44",
+    className: "bottom-[10%] left-[14%] w-40 h-28 md:w-52 md:h-36",
     delay: "6s",
     duration: "18s",
   },
   {
     src: "/phuket/4.jpg",
-    className: "bottom-[10%] right-[14%] w-40 h-28 md:w-56 md:h-40",
+    className: "bottom-[10%] right-[14%] w-40 h-28 md:w-52 md:h-36",
     delay: "2s",
     duration: "22s",
   },
   {
     src: "/phuket/5.jpg",
-    className: "top-[42%] left-[10%] w-32 h-24 md:w-44 md:h-32",
+    className: "top-[42%] left-[10%] w-40 h-28 md:w-52 md:h-36",
     delay: "8s",
     duration: "17s",
   },
   {
     src: "/phuket/6.jpg",
-    className: "top-[42%] right-[10%] w-32 h-24 md:w-44 md:h-32",
+    className: "top-[42%] right-[10%] w-40 h-28 md:w-52 md:h-36",
     delay: "5s",
     duration: "19s",
   },
