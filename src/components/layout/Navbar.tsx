@@ -7,10 +7,10 @@ import Image from "next/image";
 
 const links = [
   { href: "#itinerary", label: "Itinerary" },
+  { href: "#rsvp", label: "RSVP" },
   { href: "#stay", label: "Stay" },
   { href: "#gallery", label: "Gallery" },
   { href: "#faq", label: "FAQ" },
-  { href: "#rsvp", label: "RSVP" }, 
 ];
 
 export function Navbar() {

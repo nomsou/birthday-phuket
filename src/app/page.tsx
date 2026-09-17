@@ -17,10 +17,10 @@ export default function HomePage() {
     <main>
       <Hero />
       <ItinerarySection />
+      <RsvpSection />
       <StaySection />
       <GallerySection />
       <FaqSection />
-      <RsvpSection />
     </main>
   );
 }

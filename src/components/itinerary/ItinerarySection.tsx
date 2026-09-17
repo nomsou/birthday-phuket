@@ -20,7 +20,7 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
     title: "GAME ON",
     subtitle: "Tijani's 40th Birthday",
     description:
-      "We're kicking things off with a proper sports day. Teams, games, competition, plenty of laughs and serious bragging rights on the line. The morning belongs to the playing field; the evening belongs to Tijani. Reset, get dressed, and celebrate forty years of the man who brought us all to Phuket.",
+      "We're kicking things off with a proper sports day. Teams, games, competition, plenty of laughs and serious bragging rights on the line. The morning belongs to the playing field; the evening belongs to Tijani. Reset, get dressed, and celebrate Tijani.",
     activities: [
       {
         label: "Morning",
