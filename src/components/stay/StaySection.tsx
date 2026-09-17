@@ -47,7 +47,7 @@ export function StaySection() {
 
         {/* Two columns: content (left) + sticky image (right) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
-          {/* Left — scrollable content */}
+          {/* Left: scrollable content */}
           <div className="space-y-12">
             {/* Secure Your Stay */}
             <div>
@@ -64,9 +64,9 @@ export function StaySection() {
               <div className="space-y-4">
                 {[
                   {
-                    name: "Resort TBD, Phuket",
+                    name: "Phuket Marriott Resort & Spa, Merlin Beach",
                     tag: "[Main Celebration]",
-                    dates: "December 14th – 19th",
+                    dates: "December 14th - 19th",
                   },
                 ].map((stay) => (
                   <div
@@ -79,14 +79,14 @@ export function StaySection() {
                         className="font-medium text-sm md:text-base"
                         style={{ color: "#1A1A1A" }}
                       >
-                        {stay.name}. {stay.tag}
+                        {stay.name}
                       </p>
                       <p className="text-xs mt-1" style={{ color: "#5A5A5A" }}>
-                        {stay.dates}
+                        {stay.tag} · {stay.dates}
                       </p>
                     </div>
                     <a
-                      href="#"
+                      href="https://www.marriott.com/en-us/hotels/hktmb-phuket-marriott-resort-and-spa-merlin-beach/overview/"
                       className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-[#2C5F2D]"
                       style={{ color: "#1A1A1A" }}
                     >
@@ -109,29 +109,21 @@ export function StaySection() {
                   fontFamily: "'Playfair Display', serif",
                 }}
               >
-                Official Dress Guide.
+                Dress Code
               </h3>
               <p
-                className="text-sm leading-relaxed mb-4"
+                className="text-sm leading-relaxed"
                 style={{ color: "#5A5A5A" }}
               >
-                Celebrate in style. Download the official dress guide for each
-                event, including the recommended attire and colour palette
-                throughout the celebration.
+                Think island elegance, vibrant color, and a touch of
+                celebration. We will share a full style guide closer to the
+                date, so you can pack with flair.
               </p>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-[#2C5F2D]"
-                style={{ color: "#1A1A1A" }}
-              >
-                Download The Dress Code Guide
-                <span aria-hidden>↓</span>
-              </a>
             </div>
 
             <hr style={{ borderColor: "#E0DCD0" }} />
 
-            {/* Travel recommendations */}
+            {/* Travel agent */}
             <div>
               <h3
                 className="text-xl md:text-2xl font-medium mb-3"
@@ -140,18 +132,61 @@ export function StaySection() {
                   fontFamily: "'Playfair Display', serif",
                 }}
               >
-                Travel Recommendations.
+                Travel Agent
               </h3>
               <p
-                className="text-sm leading-relaxed"
+                className="text-sm leading-relaxed mb-4"
                 style={{ color: "#5A5A5A" }}
               >
-                Fly into Phuket International Airport (HKT). Direct flights are
-                available from several major hubs, and connecting flights are
-                common via Bangkok, Singapore, or Hong Kong. Airport transfers
-                to the resort can be arranged by the planning team. Share your
-                flight details ahead of arrival so pickup is seamless.
+                If you would like help with visa processing, flights, or general
+                travel logistics, our travel partner can assist.
               </p>
+
+              <div
+                className="rounded-lg p-5 space-y-3 w-full"
+                style={{ background: "#F5F0E6" }}
+              >
+                <div>
+                  <p
+                    className="font-medium text-sm md:text-base"
+                    style={{ color: "#1A1A1A" }}
+                  >
+                    Kharigoo Voyage Ltd
+                  </p>
+                </div>
+
+                <ul
+                  className="text-xs leading-relaxed space-y-1"
+                  style={{ color: "#5A5A5A" }}
+                >
+                  <li>Visa support and processing</li>
+                  <li>Flight booking and ticketing</li>
+                  <li>Tailored travel planning</li>
+                </ul>
+
+                <div className="text-xs space-y-1" style={{ color: "#1A1A1A" }}>
+                  <p>
+                    <span style={{ color: "#5A5A5A" }}>Phone: </span>
+                    <a
+                      href="tel:+2348159009813"
+                      className="hover:text-[#2C5F2D] transition-colors"
+                    >
+                      +234 815 900 9813
+                    </a>
+                  </p>
+                  <p>
+                    <span style={{ color: "#5A5A5A" }}>Website: </span>
+                    <a
+                      href="https://www.kharigoo.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-[#2C5F2D] transition-colors"
+                    >
+                      kharigoo.com
+                    </a>
+                  </p>
+                </div>
+              </div>
             </div>
 
             <hr style={{ borderColor: "#E0DCD0" }} />
@@ -165,7 +200,7 @@ export function StaySection() {
                   fontFamily: "'Playfair Display', serif",
                 }}
               >
-                Explore the Destinations.
+                Explore the Destinations
               </h3>
               <p
                 className="text-sm leading-relaxed mb-6"
@@ -205,7 +240,7 @@ export function StaySection() {
                   fontFamily: "'Playfair Display', serif",
                 }}
               >
-                Reserve These Dates.
+                Reserve These Dates
               </h3>
               <p
                 className="text-sm leading-relaxed mb-4"
@@ -217,7 +252,7 @@ export function StaySection() {
             </div>
           </div>
 
-          {/* Right — sticky, auto-rotating image panel */}
+          {/* Right: sticky, auto-rotating image panel */}
           <div className="hidden md:block">
             <div className="sticky top-28">
               <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden bg-[#E0DCD0]">
