@@ -9,7 +9,6 @@ export function Hero() {
       id="top"
       className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden"
     >
-      {/* Background Image */}
       <Image
         src="/hero/1.jpg"
         alt="Phuket beach paradise"
@@ -20,13 +19,10 @@ export function Hero() {
         className="object-cover"
       />
 
-      {/* Dark Overlay for readability */}
       <div className="absolute inset-0 bg-black/40" />
 
-      {/* Content */}
       <div className="relative z-10 flex flex-col items-center">
-        {/* Logo - invert colors for dark background */}
-        <div className="mb-8 brightness-0 invert opacity-90">
+        <div className="mb-8 brightness-0 invert  [&_div.relative]:!w-36 [&_div.relative]:!h-36 md:[&_div.relative]:!w-48 md:[&_div.relative]:!h-48">
           <Logo variant="mark" />
         </div>
 
