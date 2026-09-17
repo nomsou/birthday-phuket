@@ -122,9 +122,8 @@ export async function POST(req: NextRequest) {
       </table>
 
       <p style="margin:0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size:14px; line-height:1.6; color:#5A5A5A; font-style:italic;">
-        Warmly,<br/>
-        Nonso &amp; Tijani
-      </p>
+  See you in Phuket!
+</p>
     `;
 
     // Admin notification body
