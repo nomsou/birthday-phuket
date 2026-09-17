@@ -11,7 +11,7 @@ export function Hero() {
     >
       {/* Background Image */}
       <Image
-        src="/hero/1.webp"
+        src="/hero/1.jpg"
         alt="Phuket beach paradise"
         fill
         priority
