@@ -1,0 +1,236 @@
+"use client";
+
+import { useState } from "react";
+
+export function RsvpSection() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [plusOne, setPlusOne] = useState(false);
+  const [plusOneName, setPlusOneName] = useState("");
+  const [dietary, setDietary] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name.trim() || !email.trim() || submitting) return;
+
+    setSubmitting(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/rsvp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          plusOne,
+          plusOneName,
+          dietary,
+          message,
+        }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await res.json();
+        setError(data.error || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <section id="rsvp" className="px-6 py-20 bg-[#F5F0E6]">
+      <div className="max-w-xl mx-auto">
+        <div className="text-center mb-12 space-y-3">
+          <p
+            className="text-xs tracking-[0.3em] uppercase"
+            style={{ color: "#5A5A5A" }}
+          >
+            Confirm Your Spot
+          </p>
+          <h2
+            className="text-4xl md:text-5xl font-medium"
+            style={{
+              color: "#2C5F2D",
+              fontFamily: "'Playfair Display', serif",
+            }}
+          >
+            RSVP
+          </h2>
+          <p className="text-sm" style={{ color: "#5A5A5A" }}>
+            Let us know you're coming to Forty in Phuket.
+          </p>
+        </div>
+
+        {submitted ? (
+          <div
+            className="text-center rounded-2xl p-10"
+            style={{ background: "white" }}
+          >
+            <h3
+              className="text-2xl mb-2"
+              style={{
+                color: "#2C5F2D",
+                fontFamily: "'Playfair Display', serif",
+              }}
+            >
+              You're confirmed.
+            </h3>
+            <p className="text-sm" style={{ color: "#5A5A5A" }}>
+              A confirmation email is on its way. We can't wait to celebrate
+              with you.
+            </p>
+          </div>
+        ) : (
+          <form
+            onSubmit={handleSubmit}
+            className="rounded-2xl p-8 space-y-5"
+            style={{ background: "white" }}
+          >
+            <div>
+              <label
+                className="block text-xs tracking-[0.15em] uppercase mb-2"
+                style={{ color: "#5A5A5A" }}
+              >
+                Full Name
+              </label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors"
+                style={{ borderColor: "#E0DCD0", color: "#1A1A1A" }}
+              />
+            </div>
+
+            <div>
+              <label
+                className="block text-xs tracking-[0.15em] uppercase mb-2"
+                style={{ color: "#5A5A5A" }}
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors"
+                style={{ borderColor: "#E0DCD0", color: "#1A1A1A" }}
+              />
+            </div>
+
+            <div>
+              <label
+                className="block text-xs tracking-[0.15em] uppercase mb-2"
+                style={{ color: "#5A5A5A" }}
+              >
+                Phone (optional)
+              </label>
+              <input
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors"
+                style={{ borderColor: "#E0DCD0", color: "#1A1A1A" }}
+              />
+            </div>
+
+            <div className="flex items-center gap-3">
+              <input
+                type="checkbox"
+                id="plusOne"
+                checked={plusOne}
+                onChange={(e) => setPlusOne(e.target.checked)}
+                className="w-4 h-4"
+              />
+              <label
+                htmlFor="plusOne"
+                className="text-sm"
+                style={{ color: "#1A1A1A" }}
+              >
+                Bringing a plus one
+              </label>
+            </div>
+
+            {plusOne && (
+              <div>
+                <label
+                  className="block text-xs tracking-[0.15em] uppercase mb-2"
+                  style={{ color: "#5A5A5A" }}
+                >
+                  Plus One's Name
+                </label>
+                <input
+                  type="text"
+                  value={plusOneName}
+                  onChange={(e) => setPlusOneName(e.target.value)}
+                  className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors"
+                  style={{ borderColor: "#E0DCD0", color: "#1A1A1A" }}
+                />
+              </div>
+            )}
+
+            <div>
+              <label
+                className="block text-xs tracking-[0.15em] uppercase mb-2"
+                style={{ color: "#5A5A5A" }}
+              >
+                Dietary restrictions (optional)
+              </label>
+              <input
+                type="text"
+                value={dietary}
+                onChange={(e) => setDietary(e.target.value)}
+                className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors"
+                style={{ borderColor: "#E0DCD0", color: "#1A1A1A" }}
+              />
+            </div>
+
+            <div>
+              <label
+                className="block text-xs tracking-[0.15em] uppercase mb-2"
+                style={{ color: "#5A5A5A" }}
+              >
+                Message (optional)
+              </label>
+              <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                rows={3}
+                className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors resize-none"
+                style={{ borderColor: "#E0DCD0", color: "#1A1A1A" }}
+              />
+            </div>
+
+            {error && (
+              <p className="text-xs text-red-500 text-center">{error}</p>
+            )}
+
+            <button
+              type="submit"
+              disabled={submitting}
+              className="w-full py-3.5 text-sm font-medium tracking-wide uppercase rounded-lg transition-all hover:opacity-90 disabled:opacity-50"
+              style={{ background: "#2C5F2D", color: "#F5F0E6" }}
+            >
+              {submitting ? "Submitting..." : "Confirm My Spot"}
+            </button>
+          </form>
+        )}
+      </div>
+    </section>
+  );
+}

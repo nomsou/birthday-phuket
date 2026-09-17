@@ -10,6 +10,7 @@ const links = [
   { href: "#stay", label: "Stay" },
   { href: "#gallery", label: "Gallery" },
   { href: "#faq", label: "FAQ" },
+  { href: "#rsvp", label: "RSVP" }, 
 ];
 
 export function Navbar() {

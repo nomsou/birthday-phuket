@@ -10,7 +10,7 @@ export function Footer() {
 
   return (
     <footer
-      className="mt-auto border-t px-6 py-8 bg-[#F5F0E6]"
+      className="mt-auto border-t px-6 py-8 bg-white"
       style={{ borderColor: "#E0DCD0" }}
     >
       <div className="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
@@ -48,6 +48,7 @@ export function Footer() {
             { label: "Stay", href: "#stay" },
             { label: "Gallery", href: "#gallery" },
             { label: "FAQ", href: "#faq" },
+            { label: "RSVP", href: "#rsvp" },
           ].map((link) => (
             <a
               key={link.href}

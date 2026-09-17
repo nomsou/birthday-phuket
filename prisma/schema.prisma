@@ -12,3 +12,16 @@ model Setting {
   value     String
   updatedAt DateTime @updatedAt
 }
+
+model Guest {
+  id          String   @id @default(cuid())
+  name        String
+  email       String
+  phone       String?
+  plusOne     Boolean  @default(false)
+  plusOneName String?
+  dietary     String?
+  message     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

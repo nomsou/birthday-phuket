@@ -4,6 +4,7 @@ import { ItinerarySection } from "@/components/itinerary/ItinerarySection";
 import { StaySection } from "@/components/stay/StaySection";
 import { GallerySection } from "@/components/gallery/GallerySection";
 import { FaqSection } from "@/components/faq/FaqSection";
+import { RsvpSection } from "@/components/rsvp/RsvpSection";
 
 export const metadata: Metadata = {
   title: "Forty in Phuket - Nonso & Tijani",
@@ -19,6 +20,7 @@ export default function HomePage() {
       <StaySection />
       <GallerySection />
       <FaqSection />
+      <RsvpSection />
     </main>
   );
 }
