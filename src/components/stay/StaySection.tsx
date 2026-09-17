@@ -82,6 +82,8 @@ export function StaySection() {
                     </div>
                     <a
                       href="https://www.marriott.com/en-us/hotels/hktmb-phuket-marriott-resort-and-spa-merlin-beach/overview/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="group inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-colors duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D]"
                       style={{ color: "#1A1A1A" }}
                     >

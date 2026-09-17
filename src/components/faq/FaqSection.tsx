@@ -64,11 +64,6 @@ const FAQS = [
     answer:
       "December in Phuket is warm and coastal. Pack light, breathable fabrics and dress for heat and humidity. Thailand uses Type A/C/O sockets at 220V/50Hz. Bring an adapter if needed.",
   },
-  {
-    question: "How do I get from the airport to my hotel?",
-    answer:
-      "Taxi and ride-hailing services are available at Phuket International Airport. The resort is roughly 45 minutes from the airport depending on traffic.",
-  },
 ];
 
 export function FaqSection() {
