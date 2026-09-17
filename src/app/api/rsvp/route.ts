@@ -4,10 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const adminEmails =
-  process.env.ADMIN_EMAIL?.split(",")
-    .map((e) => e.trim())
-    .filter(Boolean) ?? [];
+const adminEmail = process.env.ADMIN_EMAIL;
 
 const SITE_URL = "https://fortyinphuket.com";
 const HERO_IMAGE = `${SITE_URL}/email/hero.jpg`;
@@ -122,8 +119,8 @@ export async function POST(req: NextRequest) {
       </table>
 
       <p style="margin:0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size:14px; line-height:1.6; color:#5A5A5A; font-style:italic;">
-  See you in Phuket!
-</p>
+        See you in Phuket!
+      </p>
     `;
 
     // Admin notification body
@@ -199,8 +196,7 @@ export async function POST(req: NextRequest) {
       resend.emails.send({
         from: fromAddress,
         replyTo: replyToAddress,
-        to: "no-reply@fortyinphuket.com",
-        bcc: adminEmails,
+        to: adminEmail!,
         subject: `New RSVP from ${name}`,
         html: emailShell({
           preheader: `${name} just RSVP'd for Forty in Phuket.`,
