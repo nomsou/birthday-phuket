@@ -5,10 +5,8 @@ import { useState } from "react";
 export function RsvpSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
   const [plusOne, setPlusOne] = useState(false);
   const [plusOneName, setPlusOneName] = useState("");
-  const [dietary, setDietary] = useState("");
   const [message, setMessage] = useState("");
 
   const [submitting, setSubmitting] = useState(false);
@@ -29,10 +27,8 @@ export function RsvpSection() {
         body: JSON.stringify({
           name,
           email,
-          phone,
           plusOne,
           plusOneName,
-          dietary,
           message,
         }),
       });
@@ -133,22 +129,6 @@ export function RsvpSection() {
               />
             </div>
 
-            <div>
-              <label
-                className="block text-xs tracking-[0.15em] uppercase mb-2"
-                style={{ color: "#5A5A5A" }}
-              >
-                Phone (optional)
-              </label>
-              <input
-                type="tel"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors"
-                style={{ borderColor: "#E0DCD0", color: "#1A1A1A" }}
-              />
-            </div>
-
             <div className="flex items-center gap-3">
               <input
                 type="checkbox"
@@ -183,22 +163,6 @@ export function RsvpSection() {
                 />
               </div>
             )}
-
-            <div>
-              <label
-                className="block text-xs tracking-[0.15em] uppercase mb-2"
-                style={{ color: "#5A5A5A" }}
-              >
-                Dietary restrictions (optional)
-              </label>
-              <input
-                type="text"
-                value={dietary}
-                onChange={(e) => setDietary(e.target.value)}
-                className="w-full px-4 py-3 text-sm outline-none border rounded-lg focus:border-[#2C5F2D] transition-colors"
-                style={{ borderColor: "#E0DCD0", color: "#1A1A1A" }}
-              />
-            </div>
 
             <div>
               <label
