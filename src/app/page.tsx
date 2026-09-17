@@ -18,7 +18,6 @@ export default function HomePage() {
       <Hero />
       <RsvpSection />
       <ItinerarySection />
-      <RsvpSection />
       <StaySection />
       <GallerySection />
       <FaqSection />

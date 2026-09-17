@@ -44,8 +44,8 @@ export function Footer() {
 
         <nav className="flex flex-wrap justify-center gap-6 text-xs tracking-[0.15em] uppercase">
           {[
-            { label: "Itinerary", href: "#itinerary" },
             { label: "RSVP", href: "#rsvp" },
+            { label: "Itinerary", href: "#itinerary" },
             { label: "Stay", href: "#stay" },
             { label: "Gallery", href: "#gallery" },
             { label: "FAQ", href: "#faq" },

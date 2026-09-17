@@ -6,8 +6,8 @@ import { useState } from "react";
 import Image from "next/image";
 
 const links = [
-  { href: "#itinerary", label: "Itinerary" },
   { href: "#rsvp", label: "RSVP" },
+  { href: "#itinerary", label: "Itinerary" },
   { href: "#stay", label: "Stay" },
   { href: "#gallery", label: "Gallery" },
   { href: "#faq", label: "FAQ" },

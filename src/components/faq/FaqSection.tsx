@@ -3,13 +3,41 @@ import { FaqItem } from "./FaqItem";
 const FAQS = [
   {
     question: "Do I need a visa to enter Thailand?",
-    answer:
-      "Yes. Nigerian passport holders require a visa to enter Thailand. Our travel partner, Kharigoo Voyage Ltd, can handle the entire process for you, including document preparation, embassy liaison, and interview preparation. Reach them on +234 815 900 9813 or visit kharigoo.com. We recommend starting the process early to avoid any delays.",
+    answer: (
+      <>
+        Yes. Nigerian passport holders require a visa to enter Thailand. Our
+        travel partner, Kharigoo Voyage Ltd, can handle the entire process for
+        you, including document preparation, embassy liaison, and interview
+        preparation. Reach them on{" "}
+        <a
+          href="tel:+2348159009813"
+          className="underline transition-colors hover:text-[#2C5F2D]"
+        >
+          +234 815 900 9813
+        </a>{" "}
+        or visit{" "}
+        <a
+          href="https://www.kharigoo.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline transition-colors hover:text-[#2C5F2D]"
+        >
+          kharigoo.com
+        </a>
+        . We recommend starting the process early to avoid any delays.
+      </>
+    ),
   },
   {
     question: "How do I get to Phuket?",
-    answer:
-      "There are no direct flights from Lagos to Phuket, so you'll connect through a major hub. The most common routes are Emirates via Dubai, Qatar Airways via Doha, and Turkish Airlines via Istanbul. Total travel time is typically 18 to 24 hours including the layover. We recommend booking early, as fares rise considerably closer to the date.",
+    answer: (
+      <>
+        There are no direct flights from Abuja to Phuket, so you&apos;ll connect
+        through a major hub. The most common routes are Emirates via Dubai,
+        Qatar Airways via Doha, and Turkish Airlines via Istanbul. We recommend
+        booking early, as fares rise considerably closer to the date.
+      </>
+    ),
   },
   {
     question: "What do I need to enter Thailand?",

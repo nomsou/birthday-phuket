@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { Plus, X } from "lucide-react";
 
 export function FaqItem({
@@ -8,7 +8,7 @@ export function FaqItem({
   answer,
 }: {
   question: string;
-  answer: string;
+  answer: ReactNode;
 }) {
   const [open, setOpen] = useState(false);
 
@@ -35,20 +35,19 @@ export function FaqItem({
         </span>
       </button>
 
-      {/* Animated height using grid-template-rows */}
       <div
         className="grid transition-[grid-template-rows] duration-300 ease-out"
         style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
       >
         <div className="overflow-hidden">
-          <p
+          <div
             className={`text-sm leading-relaxed pb-5 transition-opacity duration-300 ${
               open ? "opacity-100" : "opacity-0"
             }`}
             style={{ color: "#5A5A5A" }}
           >
             {answer}
-          </p>
+          </div>
         </div>
       </div>
     </div>
