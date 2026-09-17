@@ -5,6 +5,7 @@ import { StaySection } from "@/components/stay/StaySection";
 import { GallerySection } from "@/components/gallery/GallerySection";
 import { FaqSection } from "@/components/faq/FaqSection";
 import { RsvpSection } from "@/components/rsvp/RsvpSection";
+import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
   title: "Forty in Phuket - Nonso & Tijani",
@@ -15,12 +16,24 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main>
-      <Hero />
-      <RsvpSection />
-      <ItinerarySection />
-      <StaySection />
-      <GallerySection />
-      <FaqSection />
+      <Reveal>
+        <Hero />
+      </Reveal>
+      <Reveal>
+        <RsvpSection />
+      </Reveal>
+      <Reveal>
+        <ItinerarySection />
+      </Reveal>
+      <Reveal>
+        <StaySection />
+      </Reveal>
+      <Reveal>
+        <GallerySection />
+      </Reveal>
+      <Reveal>
+        <FaqSection />
+      </Reveal>
     </main>
   );
 }
