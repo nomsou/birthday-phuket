@@ -4,17 +4,17 @@ const FAQS = [
   {
     question: "Do I need a visa to enter Thailand?",
     answer:
-      "Many nationalities can enter Thailand visa-free for stays up to 30-60 days, depending on your passport. Check the Thai e-Visa portal for your specific requirements. There is no need to visit an embassy for most visa-exempt nationalities. Your passport must be valid for at least six months beyond your travel dates.",
+      "Yes. Nigerian passport holders require a visa to enter Thailand. Our travel partner, Kharigoo Voyage Ltd, can handle the entire process for you, including document preparation, embassy liaison, and interview preparation. Reach them on +234 815 900 9813 or visit kharigoo.com. We recommend starting the process early to avoid any delays.",
   },
   {
     question: "How do I get to Phuket?",
     answer:
-      "International guests will fly into Phuket International Airport (HKT). Direct flights are available from several major hubs, and connecting flights are common via Bangkok, Singapore, or Hong Kong. We recommend booking early. Fares rise considerably closer to the date.",
+      "There are no direct flights from Lagos to Phuket, so you'll connect through a major hub. The most common routes are Emirates via Dubai, Qatar Airways via Doha, and Turkish Airlines via Istanbul. Total travel time is typically 18 to 24 hours including the layover. We recommend booking early, as fares rise considerably closer to the date.",
   },
   {
     question: "What do I need to enter Thailand?",
     answer:
-      "You'll need a valid passport with at least six months' validity, proof of onward travel, and, depending on your nationality, a visa or visa-exemption confirmation. A Thailand Digital Arrival Card (TDAC) may also be required. Check current requirements before you travel.",
+      "You'll need a valid passport with at least six months' validity, proof of onward travel, and a Thai visa. Kharigoo Voyage Ltd can assist with all visa documentation and requirements. A Thailand Digital Arrival Card (TDAC) may also be required. Check current requirements closer to your travel date.",
   },
   {
     question: "Are there vaccinations I need before travelling?",
@@ -39,7 +39,7 @@ const FAQS = [
   {
     question: "How do I get from the airport to my hotel?",
     answer:
-      "We strongly recommend arranging your airport transfer through the planning team rather than booking independently. Share your confirmed flight details and we'll handle the rest.",
+      "Taxi and ride-hailing services are available at Phuket International Airport. The resort is roughly 45 minutes from the airport depending on traffic.",
   },
 ];
 
@@ -58,7 +58,7 @@ export function FaqSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-sm" style={{ color: "#5A5A5A" }}>
-            A few helpful details for guests joining us to celebrate Nonso &
+            A few helpful details for guests joining us to celebrate Nonso &amp;
             Tijani at forty.
           </p>
         </div>
