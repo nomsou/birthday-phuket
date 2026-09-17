@@ -21,7 +21,7 @@ export function DayCard({
   day: ItineraryDay;
   isFirst?: boolean;
 }) {
-  const [open, setOpen] = useState(!!isFirst);
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="border bg-white" style={{ borderColor: "#E0DCD0" }}>
