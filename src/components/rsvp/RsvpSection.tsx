@@ -47,7 +47,7 @@ export function RsvpSection() {
   };
 
   return (
-    <section id="rsvp" className="px-6 py-20 bg-[#F5F0E6]">
+    <section id="rsvp" className="px-6 py-20 bg-white">
       <div className="max-w-xl mx-auto">
         <div className="text-center mb-12 space-y-3">
           <p
@@ -72,8 +72,8 @@ export function RsvpSection() {
 
         {submitted ? (
           <div
-            className="text-center rounded-2xl p-10"
-            style={{ background: "white" }}
+            className="text-center rounded-2xl p-10 shadow-lg"
+            style={{ background: "#F5F0E6", border: "1px solid #E0DCD0" }}
           >
             <h3
               className="text-2xl mb-2"
@@ -92,8 +92,8 @@ export function RsvpSection() {
         ) : (
           <form
             onSubmit={handleSubmit}
-            className="rounded-2xl p-8 space-y-5"
-            style={{ background: "white" }}
+            className="rounded-2xl p-8 space-y-5 shadow-lg"
+            style={{ background: "#F5F0E6", border: "1px solid #E0DCD0" }}
           >
             <div>
               <label
