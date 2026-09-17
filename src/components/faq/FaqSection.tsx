@@ -32,7 +32,7 @@ const FAQS = [
     question: "How do I get to Phuket?",
     answer: (
       <>
-        There are no direct flights from Abuja to Phuket, so you&apos;ll connect
+        There are no direct flights from Nigeria to Phuket, so you&apos;ll connect
         through a major hub. The most common routes are Emirates via Dubai,
         Qatar Airways via Doha, and Turkish Airlines via Istanbul. We recommend
         booking early, as fares rise considerably closer to the date.

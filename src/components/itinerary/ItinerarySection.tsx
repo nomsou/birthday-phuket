@@ -63,11 +63,11 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
     day: "Friday",
     date: "Dec 18, 2026",
     title: "GONE YACHTING",
-    subtitle: "Phi Phi Yacht Party",
+    subtitle: "Island Yacht Party",
     description:
-      "Swimsuits on. We're taking this party to sea. Six hours aboard our private yacht exploring the waters around Phi Phi. Swim, kayak, stop at the islands, eat, drink, dance and take in some ridiculous views along the way. Then we sail into sunset. Because obviously.",
+      "Swimsuits on. We're taking this party to sea. Six hours aboard our private yacht exploring the islands. Swim, kayak, stop at the islands, eat, drink, dance and take in some ridiculous views along the way. Then we sail into sunset. Because obviously.",
     activities: [
-      { label: "All day", detail: "Private yacht charter to Phi Phi" },
+      { label: "All day", detail: "Private yacht charter to the islands" },
       { label: "Evening", detail: "Sunset sail back to Phuket" },
     ],
     image: "/itinerary/5.jpg",
