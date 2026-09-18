@@ -1,21 +1,23 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Volume2, VolumeX } from "lucide-react";
 
 const VOLUME = 0.05; // ~5% volume — very quiet, ambient
 
 export function AmbientAudio() {
+  const pathname = usePathname();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [playing, setPlaying] = useState(false);
   const [available, setAvailable] = useState(true);
 
   useEffect(() => {
+    if (pathname === "/enter") return;
+
     const audio = audioRef.current;
     if (!audio) return;
 
-    // Try to autoplay on mount. Browsers block this unless the user has
-    // interacted with the page, so we listen for the first interaction.
     audio.volume = VOLUME;
     audio.loop = true;
 
@@ -24,14 +26,12 @@ export function AmbientAudio() {
         .play()
         .then(() => setPlaying(true))
         .catch(() => {
-          // Autoplay blocked — user will trigger it via click
+          // Autoplay blocked — user will trigger it via interaction
         });
     };
 
-    // Attempt immediately
     tryPlay();
 
-    // Also attempt on first user interaction
     const onFirstInteraction = () => {
       tryPlay();
       window.removeEventListener("click", onFirstInteraction);
@@ -48,7 +48,10 @@ export function AmbientAudio() {
       window.removeEventListener("touchstart", onFirstInteraction);
       window.removeEventListener("keydown", onFirstInteraction);
     };
-  }, []);
+  }, [pathname]);
+
+  // Hide entirely on /enter, and if audio becomes unavailable
+  if (pathname === "/enter" || !available) return null;
 
   const toggle = () => {
     const audio = audioRef.current;
@@ -64,8 +67,6 @@ export function AmbientAudio() {
         .catch(() => setAvailable(false));
     }
   };
-
-  if (!available) return null;
 
   return (
     <>
