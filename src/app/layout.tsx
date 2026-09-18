@@ -20,6 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/hero/1.jpg"
+          fetchPriority="high"
+        />
+      </head>
       <body className="antialiased min-h-screen flex flex-col bg-[#F5F0E6] text-[#1A1A1A]">
         <Navbar />
         <main className="flex-1">{children}</main>

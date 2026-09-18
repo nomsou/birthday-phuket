@@ -104,7 +104,7 @@ export default function EnterForm() {
             fill
             sizes="240px"
             className="object-cover"
-            priority={i < 4}
+            priority={i < 2}
           />
         </div>
       ))}
