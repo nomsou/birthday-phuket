@@ -49,10 +49,10 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
     title: "DOUBLE TROUBLE",
     subtitle: "Chinua Turns 5 · Nonso Turns 40",
     description:
-      "Same birthday. Very different numbers. We start with a family fun day for Chinua's 5th birthday, with games, activities and plenty for the kids to get stuck into. Then the day shifts gears. Tonight, it's all about Nonso at 40. Forty years, one big night, and everyone we love in Phuket to celebrate it.",
+      "Father and Son. Same birthday. Very different numbers. We start with a family fun day for Chinua's 5th birthday, with games, activities and plenty for the kids to get stuck into. Then the day shifts gears. Tonight, it's all about Nonso at 40. Forty years, one big night, and everyone we love in Phuket to celebrate it.",
     activities: [
       {
-        label: "Afternoon",
+        label: "Morning",
         detail: "Family fun day for Chinua's 5th birthday",
       },
       { label: "Evening", detail: "Nonso's 40th birthday celebration" },
