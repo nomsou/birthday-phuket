@@ -55,6 +55,13 @@ export function GallerySection() {
     };
   }, [activeIndex, close, next, prev]);
 
+  const handleImageClick = (index: number) => {
+    if (typeof window === "undefined") return;
+    if (window.innerWidth >= 768) {
+      setActiveIndex(index);
+    }
+  };
+
   return (
     <section id="gallery" className="px-6 py-20 bg-[#F5F0E6]">
       <div className="max-w-5xl mx-auto">
@@ -75,7 +82,7 @@ export function GallerySection() {
           {PLACEHOLDER_IMAGES.map((src, i) => (
             <button
               key={i}
-              onClick={() => setActiveIndex(i)}
+              onClick={() => handleImageClick(i)}
               className="group relative aspect-square overflow-hidden rounded-lg bg-[#E0DCD0] cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2C5F2D] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F5F0E6]"
               aria-label={`Open image ${i + 1} of ${PLACEHOLDER_IMAGES.length}`}
             >
