@@ -34,11 +34,11 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
     day: "Wednesday",
     date: "Dec 16, 2026",
     title: "SPA DAYS & SIDE QUESTS",
-    subtitle: "Bundi's Brunch & Wellness Day · Guys' Day Out",
+    subtitle: "Bundi's Birthday Brunch & Wellness Day · Guys' Day Out",
     description:
-      "Divide and conquer. The ladies are heading for brunch, spa treatments and a full day of relaxation. The guys? They have Phuket, a free afternoon and their own agenda. We'll compare stories later. However you spend the day, come back rested. The week is only getting started.",
+      "Divide and conquer. The ladies are heading for Bundi's birthday brunch, spa treatments and a full day of relaxation. The guys? They have Phuket, a free afternoon and their own agenda. We'll compare stories later. However you spend the day, come back rested. The week is only getting started.",
     activities: [
-      { label: "Morning", detail: "Bundi's brunch and wellness day" },
+      { label: "Morning", detail: "Bundi's birthday brunch and wellness day" },
       { label: "Afternoon", detail: "Guys' day out, Phuket at your leisure" },
     ],
     image: "/itinerary/3.jpg",
