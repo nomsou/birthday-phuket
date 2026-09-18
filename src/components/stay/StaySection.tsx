@@ -117,12 +117,18 @@ export function StaySection() {
                 Dress Code
               </h3>
               <p
+                className="text-sm leading-relaxed mb-3"
+                style={{ color: "#5A5A5A" }}
+              >
+                Think island elegance, vibrant colour, and a touch of
+                celebration.
+              </p>
+              <p
                 className="text-sm leading-relaxed"
                 style={{ color: "#5A5A5A" }}
               >
-                Think island elegance, vibrant color, and a touch of
-                celebration. We will share a full style guide closer to the
-                date, so you can pack with flair.
+                A full style guide will be shared closer to the date, with
+                inspiration for each event.
               </p>
             </div>
 
