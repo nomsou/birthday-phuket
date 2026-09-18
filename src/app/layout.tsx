@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { AmbientAudio } from "@/components/ui/AmbientAudio";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   title: {
@@ -29,6 +30,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased min-h-screen flex flex-col bg-[#F5F0E6] text-[#1A1A1A]">
+        <Analytics />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
