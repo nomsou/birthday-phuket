@@ -52,7 +52,7 @@ export function RsvpSection() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Left: image */}
-          <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-[#E0DCD0] order-2 md:order-1">
+          <div className="hidden md:block relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-[#E0DCD0] order-2 md:order-1">
             <Image
               src="/gallery/4.jpg"
               alt="Phuket"
