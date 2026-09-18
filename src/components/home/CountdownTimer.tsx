@@ -44,7 +44,6 @@ export function CountdownTimer({ dark = false }: { dark?: boolean }) {
         { value: display.days, label: "Days" },
         { value: display.hours, label: "Hours" },
         { value: display.minutes, label: "Mins" },
-        { value: display.seconds, label: "Secs" },
       ].map((item, i) => (
         <div key={i} className="text-center">
           <div
