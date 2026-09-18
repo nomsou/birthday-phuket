@@ -5,10 +5,10 @@ import Image from "next/image";
 import { AddTripToCalendarButton } from "../itinerary/AddTripToCalendarButton";
 
 const STAY_IMAGES = [
-  "/stay/1.jpg",
-  "/stay/2.jpg",
-  "/stay/3.jpg",
-  "/stay/4.jpg",
+  "/stay/1.webp",
+  "/stay/2.webp",
+  "/stay/3.webp",
+  "/stay/4.webp",
 ];
 
 const ROTATION_MS = 4000;

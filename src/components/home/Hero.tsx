@@ -10,7 +10,7 @@ export function Hero() {
       className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 overflow-hidden"
     >
       <Image
-        src="/hero/1.jpg"
+        src="/hero/1.webp"
         alt="Phuket beach paradise"
         fill
         priority

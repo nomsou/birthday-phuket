@@ -24,7 +24,7 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href="/hero/1.jpg"
+          href="/hero/1.webp"
           fetchPriority="high"
         />
       </head>

@@ -54,7 +54,7 @@ export function RsvpSection() {
           {/* Left: image */}
           <div className="hidden md:block relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-[#E0DCD0] order-2 md:order-1">
             <Image
-              src="/gallery/4.jpg"
+              src="/gallery/4.webp"
               alt="Phuket"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

@@ -6,37 +6,37 @@ import Image from "next/image";
 
 const FLOATING_IMAGES = [
   {
-    src: "/phuket/1.jpg",
+    src: "/phuket/1.webp",
     className: "top-[10%] left-[14%] w-40 h-28 md:w-52 md:h-36",
     delay: "0s",
     duration: "16s",
   },
   {
-    src: "/phuket/2.jpg",
+    src: "/phuket/2.webp",
     className: "top-[10%] right-[14%] w-40 h-28 md:w-52 md:h-36",
     delay: "3s",
     duration: "20s",
   },
   {
-    src: "/phuket/3.jpg",
+    src: "/phuket/3.webp",
     className: "bottom-[10%] left-[14%] w-40 h-28 md:w-52 md:h-36",
     delay: "6s",
     duration: "18s",
   },
   {
-    src: "/phuket/4.jpg",
+    src: "/phuket/4.webp",
     className: "bottom-[10%] right-[14%] w-40 h-28 md:w-52 md:h-36",
     delay: "2s",
     duration: "22s",
   },
   {
-    src: "/phuket/5.jpg",
+    src: "/phuket/5.webp",
     className: "top-[42%] left-[10%] w-40 h-28 md:w-52 md:h-36",
     delay: "8s",
     duration: "17s",
   },
   {
-    src: "/phuket/6.jpg",
+    src: "/phuket/6.webp",
     className: "top-[42%] right-[10%] w-40 h-28 md:w-52 md:h-36",
     delay: "5s",
     duration: "19s",

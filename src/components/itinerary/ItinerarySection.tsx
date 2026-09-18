@@ -12,7 +12,7 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
       { label: "Afternoon", detail: "Arrivals and check-in at the resort" },
       { label: "Evening", detail: "Welcome cocktails by the pool" },
     ],
-    image: "/itinerary/1.jpg",
+    image: "/itinerary/1.webp",
   },
   {
     day: "Tuesday",
@@ -28,7 +28,7 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
       },
       { label: "Evening", detail: "Tijani's 40th birthday celebration" },
     ],
-    image: "/itinerary/2.jpg",
+    image: "/itinerary/2.webp",
   },
   {
     day: "Wednesday",
@@ -41,7 +41,7 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
       { label: "Morning", detail: "Bundi's birthday brunch and wellness day" },
       { label: "Afternoon", detail: "Guys' day out, Phuket at your leisure" },
     ],
-    image: "/itinerary/3.jpg",
+    image: "/itinerary/3.webp",
   },
   {
     day: "Thursday",
@@ -57,7 +57,7 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
       },
       { label: "Evening", detail: "Nonso's 40th birthday celebration" },
     ],
-    image: "/itinerary/4.jpg",
+    image: "/itinerary/4.webp",
   },
   {
     day: "Friday",
@@ -70,7 +70,7 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
       { label: "All day", detail: "Private yacht charter to the islands" },
       { label: "Evening", detail: "Sunset sail back to Phuket" },
     ],
-    image: "/itinerary/5.jpg",
+    image: "/itinerary/5.webp",
   },
   {
     day: "Saturday",
@@ -83,7 +83,7 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
       { label: "Morning", detail: "Farewell breakfast at the resort" },
       { label: "Afternoon", detail: "Departures and airport transfers" },
     ],
-    image: "/itinerary/6.jpg",
+    image: "/itinerary/6.webp",
   },
 ];
 
