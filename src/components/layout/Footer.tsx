@@ -47,6 +47,7 @@ export function Footer() {
             { label: "RSVP", href: "#rsvp" },
             { label: "Itinerary", href: "#itinerary" },
             { label: "Stay", href: "#stay" },
+            { label: "Phuket", href: "#phuket" },
             { label: "Gallery", href: "#gallery" },
             { label: "FAQ", href: "#faq" },
           ].map((link) => (

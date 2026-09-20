@@ -5,6 +5,7 @@ import { StaySection } from "@/components/stay/StaySection";
 import { GallerySection } from "@/components/gallery/GallerySection";
 import { FaqSection } from "@/components/faq/FaqSection";
 import { RsvpSection } from "@/components/rsvp/RsvpSection";
+import { PhuketSection } from "@/components/phuket/PhuketSection";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = {
@@ -30,6 +31,9 @@ export default function HomePage() {
       </Reveal>
       <Reveal>
         <GallerySection />
+      </Reveal>
+      <Reveal>
+        <PhuketSection />
       </Reveal>
       <Reveal>
         <FaqSection />
