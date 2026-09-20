@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { AddTripToCalendarButton } from "../itinerary/AddTripToCalendarButton";
 
 const STAY_IMAGES = [
   "/stay/1.webp",
@@ -198,68 +197,6 @@ export function StaySection() {
                   </p>
                 </div>
               </div>
-            </div>
-
-            <hr style={{ borderColor: "#E0DCD0" }} />
-
-            {/* Explore the destinations */}
-            <div>
-              <h3
-                className="text-xl md:text-2xl font-medium mb-3"
-                style={{
-                  color: "#1A1A1A",
-                  fontFamily: "'Playfair Display', serif",
-                }}
-              >
-                Explore the Destinations
-              </h3>
-              <p
-                className="text-sm leading-relaxed mb-6"
-                style={{ color: "#5A5A5A" }}
-              >
-                Familiarise yourself with everything Phuket has to offer, and
-                let the anticipation begin.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="#itinerary"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border text-sm font-medium transition-colors hover:border-[#2C5F2D] hover:text-[#2C5F2D]"
-                  style={{ borderColor: "#E0DCD0", color: "#1A1A1A" }}
-                >
-                  Explore Itinerary
-                  <span aria-hidden>→</span>
-                </a>
-                <a
-                  href="#gallery"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border text-sm font-medium transition-colors hover:border-[#2C5F2D] hover:text-[#2C5F2D]"
-                  style={{ borderColor: "#E0DCD0", color: "#1A1A1A" }}
-                >
-                  Explore Gallery
-                  <span aria-hidden>→</span>
-                </a>
-              </div>
-            </div>
-
-            <hr style={{ borderColor: "#E0DCD0" }} />
-
-            {/* Reserve these dates */}
-            <div>
-              <h3
-                className="text-xl md:text-2xl font-medium mb-3"
-                style={{
-                  color: "#1A1A1A",
-                  fontFamily: "'Playfair Display', serif",
-                }}
-              >
-                Reserve These Dates
-              </h3>
-              <p
-                className="text-sm leading-relaxed mb-4"
-                style={{ color: "#5A5A5A" }}
-              >
-                Add the dates to your calendar and let the anticipation begin.
-              </p>
-              <AddTripToCalendarButton />
             </div>
           </div>
 
