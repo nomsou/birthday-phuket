@@ -63,7 +63,7 @@ export function GallerySection() {
   };
 
   return (
-    <section id="gallery" className="px-6 py-20 bg-[#F5F0E6]">
+    <section id="gallery" className="px-6 py-20 bg-white">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12 space-y-3">
           <h2

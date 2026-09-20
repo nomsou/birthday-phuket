@@ -78,7 +78,7 @@ function ActivityCard({ activity }: { activity: Activity }) {
   const [open, setOpen] = useState(false);
 
   return (
-<div className="border bg-[#F5F0E6]" style={{ borderColor: "#E0DCD0" }}>
+    <div className="border bg-white" style={{ borderColor: "#E0DCD0" }}>
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between gap-4 px-6 md:px-10 py-6 md:py-8 text-left"
@@ -145,7 +145,7 @@ function ActivityCard({ activity }: { activity: Activity }) {
 
 export function PhuketSection() {
   return (
-    <section id="phuket" className="px-6 py-20 bg-white">
+    <section id="phuket" className="px-6 py-20 bg-[#F5F0E6]">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16 space-y-3">
           <p

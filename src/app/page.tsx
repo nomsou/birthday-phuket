@@ -30,10 +30,10 @@ export default function HomePage() {
         <StaySection />
       </Reveal>
       <Reveal>
-        <GallerySection />
+        <PhuketSection />
       </Reveal>
       <Reveal>
-        <PhuketSection />
+        <GallerySection />
       </Reveal>
       <Reveal>
         <FaqSection />
