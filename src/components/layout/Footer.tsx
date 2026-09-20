@@ -13,7 +13,7 @@ export function Footer() {
       className="mt-auto border-t px-6 py-8 bg-[#F5F0E6]"
       style={{ borderColor: "#E0DCD0" }}
     >
-      <div className="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <a
           href="#top"
           aria-label="Back to top"
@@ -42,7 +42,7 @@ export function Footer() {
           </p>
         </div>
 
-        <nav className="flex flex-wrap justify-center gap-6 text-xs tracking-[0.15em] uppercase">
+        <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs tracking-[0.15em] uppercase">
           {[
             { label: "RSVP", href: "#rsvp" },
             { label: "Itinerary", href: "#itinerary" },
