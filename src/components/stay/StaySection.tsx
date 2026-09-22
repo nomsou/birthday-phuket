@@ -161,7 +161,7 @@ export function StaySection() {
                     className="font-medium text-sm md:text-base"
                     style={{ color: "#1A1A1A" }}
                   >
-                    Kharigoo Voyage Ltd
+                    Travelletters Limited
                   </p>
                 </div>
 
@@ -178,21 +178,21 @@ export function StaySection() {
                   <p>
                     <span style={{ color: "#5A5A5A" }}>Phone: </span>
                     <a
-                      href="tel:+2348159009813"
+                      href="tel:+2349161274382"
                       className="hover:text-[#2C5F2D] transition-colors"
                     >
-                      +234 815 900 9813
+                      +234 916 127 4382
                     </a>
                   </p>
                   <p>
-                    <span style={{ color: "#5A5A5A" }}>Website: </span>
+                    <span style={{ color: "#5A5A5A" }}>Instagram: </span>
                     <a
-                      href="https://www.kharigoo.com"
+                      href="https://instagram.com/travelletters_"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-[#2C5F2D] transition-colors"
                     >
-                      kharigoo.com
+                      @travelletters_
                     </a>
                   </p>
                 </div>

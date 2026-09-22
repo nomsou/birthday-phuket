@@ -6,23 +6,23 @@ const FAQS = [
     answer: (
       <>
         Yes. Nigerian passport holders require a visa to enter Thailand. Our
-        travel partner, Kharigoo Voyage Ltd, can handle the entire process for
+        travel partner, Travelletters Limited, can handle the entire process for
         you, including document preparation, embassy liaison, and interview
         preparation. Reach them on{" "}
         <a
-          href="tel:+2348159009813"
+          href="tel:+2349161274382"
           className="underline transition-colors hover:text-[#2C5F2D]"
         >
-          +234 815 900 9813
+          +234 916 127 4382
         </a>{" "}
-        or visit{" "}
+        or on Instagram at{" "}
         <a
-          href="https://www.kharigoo.com"
+          href="https://instagram.com/travelletters_"
           target="_blank"
           rel="noopener noreferrer"
           className="underline transition-colors hover:text-[#2C5F2D]"
         >
-          kharigoo.com
+          @travelletters_
         </a>
         . We recommend starting the process early to avoid any delays.
       </>
@@ -41,8 +41,23 @@ const FAQS = [
   },
   {
     question: "What do I need to enter Thailand?",
-    answer:
-      "You'll need a valid passport with at least six months' validity, proof of onward travel, and a Thai visa. Kharigoo Voyage Ltd can assist with all visa documentation and requirements. A Thailand Digital Arrival Card (TDAC) may also be required. Check current requirements closer to your travel date.",
+    answer: (
+      <>
+        You&apos;ll need a valid passport with at least six months&apos;
+        validity, proof of onward travel, and a Thai visa.{" "}
+        <a
+          href="https://instagram.com/travelletters_"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline transition-colors hover:text-[#2C5F2D]"
+        >
+          Travelletters Limited
+        </a>{" "}
+        can assist with all visa documentation and requirements. A Thailand
+        Digital Arrival Card (TDAC) may also be required. Check current
+        requirements closer to your travel date.
+      </>
+    ),
   },
   {
     question: "Are there vaccinations I need before travelling?",
