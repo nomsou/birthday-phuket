@@ -5,26 +5,25 @@ const FAQS = [
     question: "Do I need a visa to enter Thailand?",
     answer: (
       <>
-        Yes. Nigerian passport holders require a visa to enter Thailand. Our
-        travel partner, Travelletters Limited, can handle the entire process for
-        you, including document preparation, embassy liaison, and interview
-        preparation. Reach them on{" "}
+        Yes. Nigerian passport holders require a visa to enter Thailand. If
+        you&apos;d like help, these agencies can handle the process for you,
+        including document preparation, embassy liaison, and interview
+        preparation.{" "}
         <a
           href="tel:+2349161274382"
           className="underline transition-colors hover:text-[#2C5F2D]"
         >
-          +234 916 127 4382
+          Travelletters Limited on +234 916 127 4382
         </a>{" "}
-        or on Instagram at{" "}
+        or{" "}
         <a
-          href="https://instagram.com/travelletters_"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="tel:+447348609926"
           className="underline transition-colors hover:text-[#2C5F2D]"
         >
-          @travelletters_
+          WeJapa on +44 7348 609926
         </a>
-        . We recommend starting the process early to avoid any delays.
+        . You&apos;re also welcome to apply independently. We recommend starting
+        the process early to avoid any delays.
       </>
     ),
   },
@@ -53,7 +52,16 @@ const FAQS = [
         >
           Travelletters Limited
         </a>{" "}
-        can assist with all visa documentation and requirements. A Thailand
+        or{" "}
+        <a
+          href="https://wejapa.com/visa-support/thailand"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline transition-colors hover:text-[#2C5F2D]"
+        >
+          WeJapa
+        </a>{" "}
+        can assist with visa documentation if you&apos;d like help. A Thailand
         Digital Arrival Card (TDAC) may also be required. Check current
         requirements closer to your travel date.
       </>

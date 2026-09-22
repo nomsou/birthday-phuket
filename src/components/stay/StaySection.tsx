@@ -142,59 +142,116 @@ export function StaySection() {
                   fontFamily: "'Playfair Display', serif",
                 }}
               >
-                Travel Agent
+                Travel Agents
               </h3>
               <p
                 className="text-sm leading-relaxed mb-4"
                 style={{ color: "#5A5A5A" }}
               >
                 If you would like help with visa processing, flights, or general
-                travel logistics, our travel partner can assist.
+                travel logistics, here are a couple of agencies some of our
+                guests have used. You&apos;re welcome to use either, or make
+                your own arrangements.
               </p>
 
-              <div
-                className="rounded-lg p-5 space-y-3 w-full"
-                style={{ background: "#F5F0E6" }}
-              >
-                <div>
-                  <p
-                    className="font-medium text-sm md:text-base"
+              <div className="space-y-4">
+                {/* Travelletters Limited */}
+                <div
+                  className="rounded-lg p-5 space-y-3 w-full"
+                  style={{ background: "#F5F0E6" }}
+                >
+                  <div>
+                    <p
+                      className="font-medium text-sm md:text-base"
+                      style={{ color: "#1A1A1A" }}
+                    >
+                      Travelletters Limited
+                    </p>
+                  </div>
+
+                  <ul
+                    className="text-xs leading-relaxed space-y-1"
+                    style={{ color: "#5A5A5A" }}
+                  >
+                    <li>Visa support and processing</li>
+                    <li>Flight booking and ticketing</li>
+                    <li>Tailored travel planning</li>
+                  </ul>
+
+                  <div
+                    className="text-xs space-y-1"
                     style={{ color: "#1A1A1A" }}
                   >
-                    Travelletters Limited
-                  </p>
+                    <p>
+                      <span style={{ color: "#5A5A5A" }}>Phone: </span>
+                      <a
+                        href="tel:+2349161274382"
+                        className="hover:text-[#2C5F2D] transition-colors"
+                      >
+                        +234 916 127 4382
+                      </a>
+                    </p>
+                    <p>
+                      <span style={{ color: "#5A5A5A" }}>Instagram: </span>
+                      <a
+                        href="https://instagram.com/travelletters_"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-[#2C5F2D] transition-colors"
+                      >
+                        @travelletters_
+                      </a>
+                    </p>
+                  </div>
                 </div>
 
-                <ul
-                  className="text-xs leading-relaxed space-y-1"
-                  style={{ color: "#5A5A5A" }}
+                {/* WeJapa */}
+                <div
+                  className="rounded-lg p-5 space-y-3 w-full"
+                  style={{ background: "#F5F0E6" }}
                 >
-                  <li>Visa support and processing</li>
-                  <li>Flight booking and ticketing</li>
-                  <li>Tailored travel planning</li>
-                </ul>
+                  <div>
+                    <p
+                      className="font-medium text-sm md:text-base"
+                      style={{ color: "#1A1A1A" }}
+                    >
+                      WeJapa
+                    </p>
+                  </div>
 
-                <div className="text-xs space-y-1" style={{ color: "#1A1A1A" }}>
-                  <p>
-                    <span style={{ color: "#5A5A5A" }}>Phone: </span>
-                    <a
-                      href="tel:+2349161274382"
-                      className="hover:text-[#2C5F2D] transition-colors"
-                    >
-                      +234 916 127 4382
-                    </a>
-                  </p>
-                  <p>
-                    <span style={{ color: "#5A5A5A" }}>Instagram: </span>
-                    <a
-                      href="https://instagram.com/travelletters_"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-[#2C5F2D] transition-colors"
-                    >
-                      @travelletters_
-                    </a>
-                  </p>
+                  <ul
+                    className="text-xs leading-relaxed space-y-1"
+                    style={{ color: "#5A5A5A" }}
+                  >
+                    <li>Thailand visa support</li>
+                    <li>Document preparation and consular liaison</li>
+                  </ul>
+
+                  <div
+                    className="text-xs space-y-1"
+                    style={{ color: "#1A1A1A" }}
+                  >
+                    <p>
+                      <span style={{ color: "#5A5A5A" }}>Phone: </span>
+                      <a
+                        href="tel:+447348609926"
+                        className="hover:text-[#2C5F2D] transition-colors"
+                      >
+                        +44 7348 609926
+                      </a>
+                    </p>
+                    <p>
+                      <span style={{ color: "#5A5A5A" }}>Website: </span>
+                      <a
+                        href="https://wejapa.com/visa-support/thailand"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-[#2C5F2D] transition-colors"
+                      >
+                        wejapa.com/visa-support/thailand
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
