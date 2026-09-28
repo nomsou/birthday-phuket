@@ -13,54 +13,76 @@ export function Footer() {
       className="mt-auto border-t px-6 py-8 bg-white"
       style={{ borderColor: "#E0DCD0" }}
     >
-      <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        <a
-          href="#top"
-          aria-label="Back to top"
-          className="relative w-40 h-40 shrink-0 block transition-transform hover:scale-105"
-        >
-          <Image
-            src="/logo.png"
-            alt="Forty in Phuket"
-            fill
-            sizes="160px"
-            className="object-contain"
-          />
-        </a>
-
-        <div className="text-center md:text-left">
-          <p
-            className="text-sm font-medium tracking-[0.2em] uppercase mb-2"
-            style={{ color: "#2C5F2D" }}
+      <div className="max-w-4xl mx-auto">
+        {/* Top row — logo, info, nav */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <a
+            href="#top"
+            aria-label="Back to top"
+            className="relative w-40 h-40 shrink-0 block transition-transform hover:scale-105"
           >
-            FORTY IN PHUKET
-          </p>
-          <p className="text-xs leading-relaxed" style={{ color: "#5A5A5A" }}>
-            Phuket, Thailand
-            <br />
-            December 14–19, 2026
-          </p>
+            <Image
+              src="/logo.png"
+              alt="Forty in Phuket"
+              fill
+              sizes="160px"
+              className="object-contain"
+            />
+          </a>
+
+          <div className="text-center md:text-left">
+            <p
+              className="text-sm font-medium tracking-[0.2em] uppercase mb-2"
+              style={{ color: "#2C5F2D" }}
+            >
+              FORTY IN PHUKET
+            </p>
+            <p className="text-xs leading-relaxed" style={{ color: "#5A5A5A" }}>
+              Phuket, Thailand
+              <br />
+              December 14–19, 2026
+            </p>
+          </div>
+
+          <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs tracking-[0.15em] uppercase">
+            {[
+              { label: "RSVP", href: "#rsvp" },
+              { label: "Itinerary", href: "#itinerary" },
+              { label: "Stay", href: "#stay" },
+              { label: "Phuket", href: "#phuket" },
+              { label: "Gallery", href: "#gallery" },
+              { label: "FAQ", href: "#faq" },
+            ].map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="font-semibold transition-colors duration-200 hover:text-[#2C5F2D]"
+                style={{ color: "#5A5A5A" }}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
         </div>
 
-        <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs tracking-[0.15em] uppercase">
-          {[
-            { label: "RSVP", href: "#rsvp" },
-            { label: "Itinerary", href: "#itinerary" },
-            { label: "Stay", href: "#stay" },
-            { label: "Phuket", href: "#phuket" },
-            { label: "Gallery", href: "#gallery" },
-            { label: "FAQ", href: "#faq" },
-          ].map((link) => (
+        {/* Divider */}
+        <hr className="my-6" style={{ borderColor: "#E0DCD0" }} />
+
+        {/* Bottom row — designer credit */}
+        <div className="text-center">
+          <p className="text-base" style={{ color: "#5A5A5A" }}>
+            Designed &amp; Built by{" "}
             <a
-              key={link.href}
-              href={link.href}
-              className="font-semibold transition-colors duration-200 hover:text-[#2C5F2D]"
-              style={{ color: "#5A5A5A" }}
+              href="https://www.linkedin.com/in/nomsounaogu/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold underline transition-colors duration-200 hover:opacity-70 animate-credit-pulse"
+              style={{ color: "#2C5F2D" }}
             >
-              {link.label}
+              Nomso
             </a>
-          ))}
-        </nav>
+          </p>
+        </div>
       </div>
     </footer>
   );

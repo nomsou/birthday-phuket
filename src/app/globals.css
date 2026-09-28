@@ -77,6 +77,20 @@ h3,
   }
 }
 
+@keyframes credit-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-credit-pulse {
+  animation: credit-pulse 2.4s ease-in-out infinite;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
