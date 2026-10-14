@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { CONFIG } from "@/lib/config";
 
 const PLACEHOLDER_IMAGES = [
   "/gallery/1.webp",
@@ -34,7 +35,6 @@ export function GallerySection() {
     [],
   );
 
-  // Keyboard controls while the lightbox is open
   useEffect(() => {
     if (activeIndex === null) return;
 
@@ -45,7 +45,6 @@ export function GallerySection() {
     };
 
     window.addEventListener("keydown", onKey);
-    // Prevent background scroll while the lightbox is open
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
@@ -73,7 +72,7 @@ export function GallerySection() {
               fontFamily: "'Playfair Display', serif",
             }}
           >
-            Forty in Phuket Gallery
+            {CONFIG.GALLERY_TITLE}
           </h2>
         </div>
 

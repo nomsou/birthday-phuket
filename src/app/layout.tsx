@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { AmbientAudio } from "@/components/ui/AmbientAudio";
+import { CONFIG } from "@/lib/config";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Forty in Phuket - Nonso & Tijani",
+    default: CONFIG.SITE_NAME,
     template: "%s",
   },
   description:

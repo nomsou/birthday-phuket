@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
+import { CONFIG } from "@/lib/config";
 
 const links = [
   { href: "#rsvp", label: "RSVP" },
@@ -30,7 +31,7 @@ export function Navbar() {
           <div className="absolute w-25 h-25 transition-transform group-hover:scale-105">
             <Image
               src="/logo.png"
-              alt="NT Logo"
+              alt={CONFIG.SITE_NAME}
               fill
               sizes="100px"
               className="object-contain"
@@ -81,7 +82,7 @@ export function Navbar() {
               className="text-xs tracking-[0.15em] uppercase opacity-40"
               style={{ color: "#5A5A5A" }}
             >
-              Forty in Phuket • Dec 14-19
+              {CONFIG.NAV_FOOTER_TEXT}
             </p>
           </div>
         </div>

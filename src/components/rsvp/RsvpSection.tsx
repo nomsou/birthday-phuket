@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { CONFIG } from "@/lib/config";
 
 export function RsvpSection() {
   const [name, setName] = useState("");
@@ -82,7 +83,7 @@ export function RsvpSection() {
                 RSVP
               </h2>
               <p className="text-sm" style={{ color: "#5A5A5A" }}>
-                Let us know you're coming to Forty in Phuket.
+                {CONFIG.RSVP_PROMPT}
               </p>
             </div>
 

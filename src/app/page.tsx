@@ -1,3 +1,4 @@
+// src/app/page.tsx
 import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { ItinerarySection } from "@/components/itinerary/ItinerarySection";
@@ -7,9 +8,10 @@ import { FaqSection } from "@/components/faq/FaqSection";
 import { RsvpSection } from "@/components/rsvp/RsvpSection";
 import { PhuketSection } from "@/components/phuket/PhuketSection";
 import { Reveal } from "@/components/ui/Reveal";
+import { CONFIG } from "@/lib/config";
 
 export const metadata: Metadata = {
-  title: "Forty in Phuket - Nonso & Tijani",
+  title: `${CONFIG.SITE_NAME} - Nonso & Tijani`,
   description:
     "An excellent reason to celebrate. Phuket, Thailand. Dec 14-19, 2026.",
 };

@@ -1,7 +1,7 @@
-// src/components/home/Hero.tsx
 import Image from "next/image";
 import { CountdownTimer } from "@/components/home/CountdownTimer";
 import { Logo } from "../branding/Logo";
+import { CONFIG } from "@/lib/config";
 
 export function Hero() {
   return (
@@ -31,13 +31,13 @@ export function Hero() {
             className="text-5xl md:text-7xl font-medium text-white drop-shadow-lg"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            FORTY IN PHUKET
+            {CONFIG.HERO_TITLE}
           </h1>
           <p
             className="text-base md:text-lg italic text-white/80 drop-shadow"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Nonso and Tijani turn 40, an excellent reason to celebrate
+            {CONFIG.HERO_SUBTITLE}
           </p>
           <p className="text-sm md:text-base text-white/70 drop-shadow">
             Phuket, Thailand • Dec 14–19, 2026

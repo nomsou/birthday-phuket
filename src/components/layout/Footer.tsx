@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { CONFIG } from "@/lib/config";
 
 export function Footer() {
   const pathname = usePathname();
@@ -23,7 +24,7 @@ export function Footer() {
           >
             <Image
               src="/logo.png"
-              alt="Forty in Phuket"
+              alt={CONFIG.SITE_NAME}
               fill
               sizes="160px"
               className="object-contain"
@@ -35,7 +36,7 @@ export function Footer() {
               className="text-sm font-medium tracking-[0.2em] uppercase mb-2"
               style={{ color: "#2C5F2D" }}
             >
-              FORTY IN PHUKET
+              {CONFIG.SITE_NAME.toUpperCase()}
             </p>
             <p className="text-xs leading-relaxed" style={{ color: "#5A5A5A" }}>
               Phuket, Thailand

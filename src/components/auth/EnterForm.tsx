@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
+import { CONFIG } from "@/lib/config";
 
 const FLOATING_IMAGES = [
   {
@@ -118,7 +119,7 @@ export default function EnterForm() {
               fontFamily: "'Playfair Display', serif",
             }}
           >
-            Forty in Phuket!
+            {CONFIG.ENTER_TITLE}
           </h1>
           <p
             className="text-sm italic"
@@ -127,7 +128,7 @@ export default function EnterForm() {
               fontFamily: "'Playfair Display', serif",
             }}
           >
-            A celebration for Nonso and Tijani
+            {CONFIG.ENTER_SUBTITLE}
           </p>
         </div>
 

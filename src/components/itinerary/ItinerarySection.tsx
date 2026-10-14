@@ -1,4 +1,5 @@
 import { DayCard, type ItineraryDay } from "./Daycard";
+import { CONFIG } from "@/lib/config";
 
 export const ITINERARY_DAYS: ItineraryDay[] = [
   {
@@ -47,13 +48,13 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
     day: "Thursday",
     date: "Dec 17, 2026",
     title: "DOUBLE TROUBLE",
-    subtitle: "Chinua Turns 5 · Nonso Turns 40",
+    subtitle: `${CONFIG.CHILD_EVENT} · Nonso Turns 40`,
     description:
-      "Father and Son. Same birthday. Very different numbers. We start with a family fun day for Chinua's 5th birthday, with games, activities and plenty for the kids to get stuck into. Then the day shifts gears. Tonight, it's all about Nonso at 40. Forty years, one big night, and everyone we love in Phuket to celebrate it.",
+      "We start with a fun day for Chinua and Somma's 5th birthday, with games, activities and plenty for the kids to get stuck into. Then the day shifts gears. Tonight, it's all about Nonso at 40. Forty years, one big night, and everyone we love in Phuket to celebrate it.",
     activities: [
       {
         label: "Morning",
-        detail: "Family fun day for Chinua's 5th birthday",
+        detail: "Family fun day for Chinua and Somma's birthday",
       },
       { label: "Evening", detail: "Nonso's 40th birthday celebration" },
     ],
@@ -105,7 +106,7 @@ export function ItinerarySection() {
               fontFamily: "'Playfair Display', serif",
             }}
           >
-            Forty in Phuket Itinerary
+            {CONFIG.SITE_NAME} Itinerary
           </h2>
           <p className="text-sm" style={{ color: "#5A5A5A" }}>
             Six days on the Andaman coast. Celebration, sea, and the people you
