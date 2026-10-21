@@ -83,7 +83,7 @@ export function StaySection() {
                       href="https://www.marriott.com/en-us/hotels/hktmb-phuket-marriott-resort-and-spa-merlin-beach/overview/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-colors duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D]"
+                      className="group inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-all duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D] hover:translate-x-1"
                       style={{ color: "#1A1A1A" }}
                     >
                       Reserve Your Room
@@ -116,30 +116,50 @@ export function StaySection() {
                 Dress Code
               </h3>
               <p
-                className="text-sm leading-relaxed mb-3"
+                className="text-sm leading-relaxed mb-4"
                 style={{ color: "#5A5A5A" }}
               >
                 Think island elegance, vibrant colour, and a touch of
-                celebration.
+                celebration. Download the guides below for inspiration.
               </p>
 
-              <a
-                href="/dress-code/dress-code-nonso-dec-17.pdf"
-                download
-                className="group inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-colors duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D]"
-                style={{ color: "#1A1A1A" }}
-              >
-                Download Dress Code Guide
-                <span
-                  aria-hidden
-                  className="inline-block"
-                  style={{
-                    animation: "arrow-slide 1.4s ease-in-out infinite",
-                  }}
+              <div className="flex flex-col gap-3 items-start">
+                <a
+                  href="/dress-code/dress-code-nonso-dec-17.pdf"
+                  download
+                  className="group inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-all duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D] hover:translate-x-1"
+                  style={{ color: "#1A1A1A" }}
                 >
-                  →
-                </span>
-              </a>
+                  Download Nonso's Dress Code Guide
+                  <span
+                    aria-hidden
+                    className="inline-block"
+                    style={{
+                      animation: "arrow-slide 1.4s ease-in-out infinite",
+                    }}
+                  >
+                    →
+                  </span>
+                </a>
+
+                <a
+                  href="/dress-code/dress-code-chinua-dec-17.pdf"
+                  download
+                  className="group inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-all duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D] hover:translate-x-1"
+                  style={{ color: "#1A1A1A" }}
+                >
+                  Download Chinua's Dress Code Guide
+                  <span
+                    aria-hidden
+                    className="inline-block"
+                    style={{
+                      animation: "arrow-slide 1.4s ease-in-out infinite",
+                    }}
+                  >
+                    →
+                  </span>
+                </a>
+              </div>
             </div>
 
             <hr style={{ borderColor: "#E0DCD0" }} />
