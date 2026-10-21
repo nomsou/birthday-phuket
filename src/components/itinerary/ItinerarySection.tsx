@@ -72,7 +72,7 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
         },
       },
     ],
-    image: "/itinerary/4.webp",
+    image: "/itinerary/4.webp?v=2",
   },
   {
     day: "Friday",
