@@ -83,7 +83,7 @@ export function DayCard({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
               <div className="space-y-8">
                 <p
-                  className="text-base leading-relaxed"
+                  className="text-base leading-relaxed whitespace-pre-line"
                   style={{ color: "#5A5A5A" }}
                 >
                   {day.description}

@@ -130,7 +130,7 @@ export function StaySection() {
                   className="group inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-all duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D] hover:translate-x-1"
                   style={{ color: "#1A1A1A" }}
                 >
-                  Download Nonso's Dress Code Guide
+                  Download Nonso's 40th Party Dress Code Guide
                   <span
                     aria-hidden
                     className="inline-block"
@@ -148,7 +148,8 @@ export function StaySection() {
                   className="group inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-all duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D] hover:translate-x-1"
                   style={{ color: "#1A1A1A" }}
                 >
-                  Download Chinua's Dress Code Guide
+                  Download Chinua's 5th Birthday Pirate Adventure Dress Code
+                  Guide
                   <span
                     aria-hidden
                     className="inline-block"
