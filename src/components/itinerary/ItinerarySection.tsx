@@ -54,8 +54,23 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
       {
         label: "Morning",
         detail: `Family fun day for ${CONFIG.CHILD_POSSESSIVE} birthday`,
+        dressCode: {
+          title: "Pirate Party — Dress Code",
+          body: "Ahoy, little adventurers! Come dressed for a fun-filled pirate celebration in red, black and white, with stripes welcome. Think playful, pirate-inspired looks for the children and relaxed, stylish interpretations for the grown-ups, perfect for a daytime island celebration.",
+          cta: "View our dress code guide for inspiration",
+          // href: "/dress-code/dress-code-chinua-dec-17.pdf", // add when ready
+        },
       },
-      { label: "Evening", detail: "Nonso's 40th birthday celebration" },
+      {
+        label: "Evening",
+        detail: "Nonso's 40th birthday celebration",
+        dressCode: {
+          title: "Formal Evening Elegance — Dress Code",
+          body: "Dress to celebrate in rich jewel tones, elegant silhouettes and sophisticated eveningwear. Think emerald green, sapphire blue, deep teal, ruby red, burgundy and amethyst purple for an unforgettable evening under the stars.",
+          cta: "View our dress code guide for inspiration",
+          href: "/dress-code/dress-code-nonso-dec-17.pdf",
+        },
+      },
     ],
     image: "/itinerary/4.webp",
   },

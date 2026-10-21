@@ -10,7 +10,16 @@ export type ItineraryDay = {
   title: string;
   subtitle: string;
   description: string;
-  activities: { label: string; detail: string }[];
+  activities: {
+    label: string;
+    detail: string;
+    dressCode?: {
+      title: string;
+      body: string;
+      cta?: string;
+      href?: string;
+    };
+  }[];
   image: string;
 };
 
@@ -25,7 +34,6 @@ export function DayCard({
 
   return (
     <div className="border bg-white" style={{ borderColor: "#E0DCD0" }}>
-      {/* Header — always visible */}
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between gap-4 px-6 md:px-10 py-6 md:py-8 text-left"
@@ -62,20 +70,17 @@ export function DayCard({
         />
       </button>
 
-      {/* Animated expand/collapse */}
       <div
         className="grid transition-[grid-template-rows] duration-500 ease-out"
         style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
       >
         <div className="overflow-hidden">
-          {/* Inner padding lives here so it collapses cleanly */}
           <div
             className={`px-6 md:px-10 pb-10 md:pb-12 transition-opacity duration-500 ${
               open ? "opacity-100" : "opacity-0"
             }`}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
-              {/* Left: description + activities */}
               <div className="space-y-8">
                 <p
                   className="text-base leading-relaxed"
@@ -108,13 +113,57 @@ export function DayCard({
                           {a.label}
                         </span>
                         : {a.detail}
+                        {a.dressCode && (
+                          <div
+                            className="mt-3 rounded-lg p-4"
+                            style={{
+                              background: "#F5F0E6",
+                              border: "1px solid #E0DCD0",
+                            }}
+                          >
+                            <p
+                              className="text-xs tracking-[0.15em] uppercase font-semibold mb-2"
+                              style={{ color: "#2C5F2D" }}
+                            >
+                              {a.dressCode.title}
+                            </p>
+                            <p
+                              className="text-sm leading-relaxed"
+                              style={{ color: "#5A5A5A" }}
+                            >
+                              {a.dressCode.body}
+                            </p>
+                            {a.dressCode.cta && (
+                              <a
+                                href={
+                                  a.dressCode.href ??
+                                  "/dress-code/dress-code-nonso-dec-17.pdf"
+                                }
+                                download
+                                className="mt-3 inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-colors duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D]"
+                                style={{ color: "#1A1A1A" }}
+                              >
+                                {a.dressCode.cta}
+                                <span
+                                  aria-hidden
+                                  className="inline-block"
+                                  style={{
+                                    animation:
+                                      "arrow-slide 1.4s ease-in-out infinite",
+                                  }}
+                                >
+                                  →
+                                </span>
+                              </a>
+                            )}
+                          </div>
+                        )}
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
 
-              {/* Right: image */}
               <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-[#E0DCD0]">
                 <Image
                   src={day.image}
