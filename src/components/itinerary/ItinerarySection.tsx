@@ -52,7 +52,7 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
     description:
       process.env.NEXT_PUBLIC_VARIANT === "DEC"
         ? `We start with a fun day for ${CONFIG.CHILD_POSSESSIVE} 5th birthday, with games, activities and plenty for the kids to get stuck into. Then the day shifts gears. Tonight, it's all about Nonso at 40. Forty years, one big night, and everyone we love in Phuket to celebrate it.`
-        : "We kick off the celebrations with a pirate-themed party for Chinua’s 5th birthday, filled with treasure hunts, exciting games, interactive activities and plenty of surprises for our adventurers! Then the day shifts gears. Tonight, it's all about Nonso at 40. Forty years, one big night, and everyone we love in Phuket to celebrate it.",
+        : "Father and Son. Same birthday. Very different numbers. We kick off the celebrations with a pirate-themed party for Chinua’s 5th birthday, filled with treasure hunts, exciting games, interactive activities and plenty of surprises for our adventurers. Then the day shifts gears. Tonight, it's all about Nonso at 40. Forty years, one big night, and everyone we love in Phuket to celebrate it.",
     activities: [
       {
         label: "Morning",
@@ -108,7 +108,7 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
   },
 ];
 
-export function ItinerarySection() {
+export const ItinerarySection = () => {
   return (
     <section id="itinerary" className="px-6 py-20 bg-[#F5F0E6]">
       <div className="max-w-4xl mx-auto">
@@ -142,4 +142,4 @@ export function ItinerarySection() {
       </div>
     </section>
   );
-}
+};
