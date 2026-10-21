@@ -49,11 +49,17 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
     date: "Dec 17, 2026",
     title: "DOUBLE TROUBLE",
     subtitle: `${CONFIG.CHILD_EVENT} · Nonso Turns 40`,
-    description: `We start with a fun day for ${CONFIG.CHILD_POSSESSIVE} 5th birthday, with games, activities and plenty for the kids to get stuck into. Then the day shifts gears. Tonight, it's all about Nonso at 40. Forty years, one big night, and everyone we love in Phuket to celebrate it.`,
+    description:
+      process.env.NEXT_PUBLIC_VARIANT === "DEC"
+        ? `We start with a fun day for ${CONFIG.CHILD_POSSESSIVE} 5th birthday, with games, activities and plenty for the kids to get stuck into. Then the day shifts gears. Tonight, it's all about Nonso at 40. Forty years, one big night, and everyone we love in Phuket to celebrate it.`
+        : "We kick off the celebrations with a pirate-themed party for Chinua’s 5th birthday, filled with treasure hunts, exciting games, interactive activities and plenty of surprises for our adventurers! Then the day shifts gears. Tonight, it's all about Nonso at 40. Forty years, one big night, and everyone we love in Phuket to celebrate it.",
     activities: [
       {
         label: "Morning",
-        detail: `Family fun day for ${CONFIG.CHILD_POSSESSIVE} birthday`,
+        detail:
+          process.env.NEXT_PUBLIC_VARIANT === "DEC"
+            ? `Family fun day for ${CONFIG.CHILD_POSSESSIVE} birthday`
+            : "Chinua's Pirate Birthday Adventure",
         dressCode: {
           title: "DRESS CODE — PIRATE-INSPIRED STYLE",
           body: "Ahoy, little adventurers! Come dressed for a fun-filled pirate celebration in red, black and white, with stripes welcome. Think playful, pirate-inspired looks for the children and relaxed, stylish interpretations for the grown-ups, perfect for a daytime island celebration.",
