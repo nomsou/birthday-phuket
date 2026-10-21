@@ -52,7 +52,7 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
     description:
       process.env.NEXT_PUBLIC_VARIANT === "DEC"
         ? `We start with a fun day for ${CONFIG.CHILD_POSSESSIVE} 5th birthday, with games, activities and plenty for the kids to get stuck into. Then the day shifts gears. Tonight, it's all about Nonso at 40. Forty years, one big night, and everyone we love in Phuket to celebrate it.`
-        : "Father and Son. Same birthday. Very different numbers.\n\nWe kick off the celebrations with a pirate-themed party for Chinua’s 5th birthday.Then the evening is all about Nonso. Forty years, one big night, and everyone we love in Phuket to celebrate it.",
+        : "Father and Son. Same birthday. Very different numbers.\n\nWe kick off the celebrations with a pirate-themed party for Chinua’s 5th birthday. Then the evening is all about Nonso. Forty years, one big night, and everyone we love in Phuket to celebrate it.",
     activities: [
       {
         label: "Morning",
