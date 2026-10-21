@@ -122,13 +122,24 @@ export function StaySection() {
                 Think island elegance, vibrant colour, and a touch of
                 celebration.
               </p>
-              <p
-                className="text-sm leading-relaxed"
-                style={{ color: "#5A5A5A" }}
+
+              <a
+                href="/dress-code/dress-code-nonso-dec-17.pdf"
+                download
+                className="group inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-colors duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D]"
+                style={{ color: "#1A1A1A" }}
               >
-                A full style guide will be shared closer to the date, with
-                inspiration for each event.
-              </p>
+                Download Dress Code Guide
+                <span
+                  aria-hidden
+                  className="inline-block"
+                  style={{
+                    animation: "arrow-slide 1.4s ease-in-out infinite",
+                  }}
+                >
+                  →
+                </span>
+              </a>
             </div>
 
             <hr style={{ borderColor: "#E0DCD0" }} />
