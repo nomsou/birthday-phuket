@@ -58,7 +58,7 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
           title: "Pirate Party — Dress Code",
           body: "Ahoy, little adventurers! Come dressed for a fun-filled pirate celebration in red, black and white, with stripes welcome. Think playful, pirate-inspired looks for the children and relaxed, stylish interpretations for the grown-ups, perfect for a daytime island celebration.",
           cta: "View our dress code guide for inspiration",
-          // href: "/dress-code/dress-code-chinua-dec-17.pdf", // add when ready
+          href: "/dress-code/dress-code-chinua-dec-17.pdf",
         },
       },
       {
