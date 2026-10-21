@@ -13,6 +13,9 @@ export const CONFIG = {
 
   CHILD_EVENT: VARIANT === "DEC" ? "Chinua and Somma Turn 5" : "Chinua Turns 5",
 
+  CHILD_NAME: VARIANT === "DEC" ? "Chinua and Somma" : "Chinua",
+  CHILD_POSSESSIVE: VARIANT === "DEC" ? "Chinua and Somma's" : "Chinua's",
+
   ADMIN_PASSWORD: VARIANT === "DEC" ? DEC_PASS : FORTY_PASS,
 
   NAV_FOOTER_TEXT:

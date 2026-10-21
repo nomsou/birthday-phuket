@@ -49,12 +49,11 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
     date: "Dec 17, 2026",
     title: "DOUBLE TROUBLE",
     subtitle: `${CONFIG.CHILD_EVENT} · Nonso Turns 40`,
-    description:
-      "We start with a fun day for Chinua and Somma's 5th birthday, with games, activities and plenty for the kids to get stuck into. Then the day shifts gears. Tonight, it's all about Nonso at 40. Forty years, one big night, and everyone we love in Phuket to celebrate it.",
+    description: `We start with a fun day for ${CONFIG.CHILD_POSSESSIVE} 5th birthday, with games, activities and plenty for the kids to get stuck into. Then the day shifts gears. Tonight, it's all about Nonso at 40. Forty years, one big night, and everyone we love in Phuket to celebrate it.`,
     activities: [
       {
         label: "Morning",
-        detail: "Family fun day for Chinua and Somma's birthday",
+        detail: `Family fun day for ${CONFIG.CHILD_POSSESSIVE} birthday`,
       },
       { label: "Evening", detail: "Nonso's 40th birthday celebration" },
     ],
