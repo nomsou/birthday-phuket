@@ -125,6 +125,24 @@ export function StaySection() {
 
               <div className="flex flex-col gap-3 items-start">
                 <a
+                  href="/dress-code/dress-code-TJ-dec-17.pdf"
+                  download
+                  className="group inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-all duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D] hover:translate-x-1"
+                  style={{ color: "#1A1A1A" }}
+                >
+                  Download TJ's 40th Birthday Dress Code Guide
+                  <span
+                    aria-hidden
+                    className="inline-block"
+                    style={{
+                      animation: "arrow-slide 1.4s ease-in-out infinite",
+                    }}
+                  >
+                    →
+                  </span>
+                </a>
+
+                <a
                   href="/dress-code/dress-code-nonso-dec-17.pdf"
                   download
                   className="group inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-all duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D] hover:translate-x-1"

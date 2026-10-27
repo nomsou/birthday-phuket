@@ -27,7 +27,16 @@ export const ITINERARY_DAYS: ItineraryDay[] = [
         label: "Morning",
         detail: "Sports day with teams, games and competition",
       },
-      { label: "Evening", detail: "Tijani's 40th birthday celebration" },
+      {
+        label: "Evening",
+        detail: "Tijani's 40th birthday celebration",
+        dressCode: {
+          title: "DRESS CODE — TJ'S BIRTHDAY",
+          body: "Dress to celebrate Tijani's 40th in style. View the guide below for outfit inspiration for the evening.", 
+          cta: "View our dress code guide for inspiration",
+          href: "/dress-code/dress-code-TJ-dec-17.pdf",
+        },
+      },
     ],
     image: "/itinerary/2.webp",
   },
