@@ -74,7 +74,7 @@ export function Footer() {
           <p className="text-base" style={{ color: "#5A5A5A" }}>
             Designed &amp; Built by{" "}
             <a
-              href="https://www.linkedin.com/in/nomsounaogu/"
+              href="https://www.nomso.dev/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold underline transition-colors duration-200 hover:opacity-70 animate-credit-pulse"
