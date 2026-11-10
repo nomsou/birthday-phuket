@@ -64,6 +64,8 @@ export function StaySection() {
                 {[
                   {
                     name: "Phuket Marriott Resort & Spa, Merlin Beach",
+                    href: "https://www.marriott.com/en-us/hotels/hktmb-phuket-marriott-resort-and-spa-merlin-beach/overview/",
+                    cta: "Reserve Your Room",
                   },
                 ].map((stay) => (
                   <div
@@ -80,13 +82,13 @@ export function StaySection() {
                       </p>
                     </div>
                     <a
-                      href="https://www.marriott.com/en-us/hotels/hktmb-phuket-marriott-resort-and-spa-merlin-beach/overview/"
+                      href={stay.href}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-all duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D] hover:translate-x-1"
                       style={{ color: "#1A1A1A" }}
                     >
-                      Reserve Your Room
+                      {stay.cta}
                       <span
                         aria-hidden
                         className="inline-block"
@@ -99,6 +101,58 @@ export function StaySection() {
                     </a>
                   </div>
                 ))}
+
+                {/* Alternative Accommodation */}
+                <div className="pt-2">
+                  <p
+                    className="text-xs tracking-[0.2em] uppercase mb-3"
+                    style={{ color: "#5A5A5A" }}
+                  >
+                    Alternative Accommodation
+                  </p>
+                  <p
+                    className="text-xs leading-relaxed mb-3"
+                    style={{ color: "#5A5A5A" }}
+                  >
+                    If the Marriott is fully booked, we recommend the following
+                    nearby option.
+                  </p>
+
+                  <div
+                    className="rounded-lg p-5 flex flex-col gap-3"
+                    style={{ background: "#F5F0E6" }}
+                  >
+                    <div>
+                      <p
+                        className="font-medium text-sm md:text-base"
+                        style={{ color: "#1A1A1A" }}
+                      >
+                        Crest Resort & Pool Villas
+                      </p>
+                      <p className="text-xs mt-1" style={{ color: "#5A5A5A" }}>
+                        Resort · Phuket, Thailand
+                      </p>
+                    </div>
+                    <a
+                      href="https://www.crestphuket.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-2 text-sm font-medium underline-offset-4 decoration-[#1A1A1A] transition-all duration-200 hover:text-[#2C5F2D] hover:decoration-[#2C5F2D] hover:translate-x-1"
+                      style={{ color: "#1A1A1A" }}
+                    >
+                      View & Book
+                      <span
+                        aria-hidden
+                        className="inline-block"
+                        style={{
+                          animation: "arrow-slide 1.4s ease-in-out infinite",
+                        }}
+                      >
+                        →
+                      </span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
